@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "set-menu.schema.json",
+  "title": "SetMenu",
+  "description": "A set menu offering (lunch, pre-theatre, party, afternoon tea). The price lives on the root object; individual choice items do not carry their own prices.",
+  "type": "object",
+  "required": ["id", "slug", "name", "currency", "prices", "available"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "currency": {
+      "type": "string",
+      "default": "GBP"
+    },
+    "prices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["context", "amount"],
+        "additionalProperties": false,
+        "properties": {
+          "context": {
+            "type": "string",
+            "description": "e.g. per-person, for-two, standard."
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "seasonal": {
+      "type": "boolean"
+    },
+    "soldOut": {
+      "type": "boolean"
+    },
+    "availability": {
+      "type": "string",
+      "description": "Human-readable time window, e.g. 12:00–18:30."
+    }
+  },
+  "definitions": {
+    "setMenuChoiceItem": {
+      "title": "SetMenuChoiceItem",
+      "description": "A dish that a customer may choose within a set menu course. No price — that is on the parent.",
+      "type": "object",
+      "required": ["id", "slug", "name", "dietary", "allergens"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "slug": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": ["string", "null"] },
+        "dietary": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["vegetarian", "vegan", "gluten-free"]
+          }
+        },
+        "allergens": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "celery",
+              "gluten",
+              "crustaceans",
+              "egg",
+              "fish",
+              "lupin",
+              "milk",
+              "molluscs",
+              "mustard",
+              "nuts",
+              "peanuts",
+              "sesame",
+              "soya",
+              "sulphur-dioxide"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

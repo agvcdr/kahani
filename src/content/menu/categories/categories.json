@@ -119,6 +119,7 @@
     "label": "Pre-Theatre Menu",
     "parentMenu": "pre-theatre",
     "description": "£19.95 per person. Starter, main and sundry — great value before an evening show.",
+    "availability": "12:00–18:30",
     "sortOrder": 1
   },
   {
