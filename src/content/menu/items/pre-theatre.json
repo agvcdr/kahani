@@ -1,0 +1,111 @@
+{
+  "id": "pre-theatre",
+  "name": "Pre-Theatre Menu",
+  "pricePerPerson": 19.95,
+  "currency": "GBP",
+  "preStarter": "Poppadoms & Chutney",
+  "starters": {
+    "instruction": "Please choose one.",
+    "items": [
+      {
+        "id": "pt-veg-pakora",
+        "name": "Vegetable Pakora",
+        "description": "Julienne of vegetables in a crisp batter coating with ground spices.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "id": "pt-fish-pakora",
+        "name": "Fish Pakora",
+        "description": "Marinated white fish in a crisp gram flour batter.",
+        "dietary": []
+      },
+      {
+        "id": "pt-chicken-pakora",
+        "name": "Chicken Pakora",
+        "description": "Marinated chicken in a crisp gram flour batter.",
+        "dietary": []
+      },
+      {
+        "id": "pt-chilli-squid",
+        "name": "Chilli Squid",
+        "description": "Marinated with crushed chilli and fresh ground spices.",
+        "dietary": []
+      },
+      {
+        "id": "pt-seekh-kebab",
+        "name": "Seekh Kebab",
+        "description": "Spiced minced lamb, cooked in the tandoor.",
+        "dietary": []
+      },
+      {
+        "id": "pt-onion-bhaji",
+        "name": "Onion Bhaji",
+        "description": "Traditional recipe of green chilli, gram flour and garam masala.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "id": "pt-aloo-chana-chaat",
+        "name": "Aloo Chana Chaat",
+        "description": "Spiced potato and chickpea with mint, tamarind and sweet chilli dressing. Served cold.",
+        "dietary": ["vegetarian"]
+      }
+    ]
+  },
+  "mains": {
+    "instruction": "Please choose one.",
+    "items": [
+      {
+        "id": "pt-chicken-karahi",
+        "name": "Chicken Karahi",
+        "description": "Cooked with onion, pepper and tomatoes.",
+        "dietary": []
+      },
+      {
+        "id": "pt-chicken-korma",
+        "name": "Chicken Korma",
+        "description": "Chicken breast with tomato, onion, almond and coconut with a touch of cream.",
+        "dietary": []
+      },
+      {
+        "id": "pt-chicken-tikka-masala",
+        "name": "Chicken Tikka Masala",
+        "description": "Charcoal-grilled chicken tikka cooked with tomato, onions, cashew nuts and cream.",
+        "dietary": []
+      },
+      {
+        "id": "pt-lamb-jalfrezi",
+        "name": "Lamb Jalfrezi",
+        "description": "Julienne of ginger, tomato and bell peppers in a tangy sauce.",
+        "dietary": []
+      },
+      {
+        "id": "pt-old-school-lamb-curry",
+        "name": "Old School Lamb Curry",
+        "description": "Slow cooked lamb with onion, tomato, ginger, garlic and made with lots of love.",
+        "dietary": []
+      },
+      {
+        "id": "pt-vegetable-korma",
+        "name": "Vegetable Korma",
+        "description": "Coconut and cream based gravy.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "id": "pt-tadka-dal",
+        "name": "Tadka Dal",
+        "description": "Spiced yellow lentils tempered with onion, garlic and fresh coriander.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "id": "pt-veg-tak-a-tak",
+        "name": "Vegetable Tak-a-Tak",
+        "description": "Seasonal vegetables marinated and cooked on the griddle with onion, tomato and chaat masala.",
+        "dietary": ["vegetarian"]
+      }
+    ]
+  },
+  "sundries": {
+    "instruction": "Please choose one.",
+    "options": ["Boiled Rice", "Pilau Rice", "Plain Naan", "Garlic Naan"]
+  }
+}

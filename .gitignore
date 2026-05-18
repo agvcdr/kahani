@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude Code session and generated files
+.claude/
+session.md
+AGENT_SKILL_MAP.md
+Questions.txt
+
+# Node / build output (for when the framework is added)
+node_modules/
+dist/
+.output/
+.nuxt/
+.astro/
+.next/
+.svelte-kit/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+Thumbs.db

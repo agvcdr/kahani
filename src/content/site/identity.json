@@ -1,0 +1,34 @@
+{
+  "name": "Kahani Indian Street Food Edinburgh",
+  "shortName": "Kahani",
+  "tagline": "Authentic Indian Street Food",
+  "cuisine": "Indian street food",
+  "description": "Edinburgh's award-winning Indian street food restaurant, specialising in authentic dishes like chicken tikka masala, biryani, butter chicken, tandoori lamb chops, and vegetable pakora.",
+  "awards": [
+    {
+      "title": "Best Restaurant in Edinburgh",
+      "body": "Scottish Curry Awards"
+    }
+  ],
+  "services": [
+    "dine-in",
+    "online-ordering",
+    "table-reservations",
+    "catering",
+    "events",
+    "gift-vouchers",
+    "afternoon-tea",
+    "byob"
+  ],
+  "onlineOrdering": {
+    "provider": "Ordugh",
+    "url": "https://www.ordugh.com/api/fb/_w_j_wq_g"
+  },
+  "bookTable": {
+    "url": "https://kahanirestaurant.co.uk/book-a-table/"
+  },
+  "giftVouchers": {
+    "url": "https://kahani-indian-street-food-edinburgh.store.vouchers.smebizness.co.uk/"
+  },
+  "allergenNotice": "Please inform your server of any allergies or food intolerances you may have. Products may contain peanuts, tree nuts, soy, dairy, eggs, wheat, shellfish, fish, and other allergens. A full allergen chart is available on request."
+}

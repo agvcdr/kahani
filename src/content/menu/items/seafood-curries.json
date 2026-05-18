@@ -1,0 +1,50 @@
+[
+  {
+    "id": "home-style-fish-curry",
+    "slug": "home-style-fish-curry",
+    "name": "Home Style Fish Curry",
+    "description": "Cooked with tomato, onion, garlic, ginger & cumin.",
+    "categories": ["seafood-curries"],
+    "price": 15.95,
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "south-indian-monkfish-curry",
+    "slug": "south-indian-monkfish-curry",
+    "name": "South Indian Monkfish Curry",
+    "description": "Coconut, onion and tomato sauce tempered with mustard seeds.",
+    "categories": ["seafood-curries"],
+    "price": 16.95,
+    "currency": "GBP",
+    "spiceLevel": 3,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "king-prawn-karahi",
+    "slug": "king-prawn-karahi",
+    "name": "King Prawn Karahi",
+    "description": "King prawn cooked in caramelised onions, tomatoes, bell pepper, fresh green chilli and ginger.",
+    "categories": ["seafood-curries"],
+    "price": 17.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "seafood-moilee",
+    "slug": "seafood-moilee",
+    "name": "Seafood Moilee",
+    "description": "Squid, scallop, monkfish, mussel and prawn cooked in a coconut and cream based sauce — a South Indian favourite.",
+    "categories": ["seafood-curries"],
+    "price": 18.95,
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": [],
+    "available": true
+  }
+]

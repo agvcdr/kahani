@@ -1,0 +1,112 @@
+[
+  {
+    "id": "lamb-karahi",
+    "slug": "lamb-karahi",
+    "name": "Lamb Karahi",
+    "description": "Delicately cooked in caramelised onions, tomatoes, bell pepper, fresh green chilli, garlic and ginger.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "lamb-jalfrezi",
+    "slug": "lamb-jalfrezi",
+    "name": "Lamb Jalfrezi",
+    "description": "Julienne of ginger, tomato and bell peppers in a tangy sauce tempered with carom seeds.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "old-school-lamb-curry",
+    "slug": "old-school-lamb-curry",
+    "name": "Old School Lamb Curry",
+    "description": "Simple by today's standards, but 60 years ago this dish was a revelation to the good folks of Edinburgh. Slow cooked lamb with onion, tomato, ginger, garlic and lots of love.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "featured": true,
+    "available": true
+  },
+  {
+    "id": "lamb-korma",
+    "slug": "lamb-korma",
+    "name": "Lamb Korma",
+    "description": "Mildly spiced lamb cooked with tomato, onion, cashew nuts, almond and cooked with fresh cream to finish.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "lamb-saag",
+    "slug": "lamb-saag",
+    "name": "Lamb Saag",
+    "description": "Cooked with aromatic spices and infused in a sauce made with fresh spinach, garlic and tempering of cumin.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "punjabi-gosht",
+    "slug": "punjabi-gosht",
+    "name": "Punjabi Gosht (on the bone)",
+    "description": "Traditional home-style cooking. Make it your own by adding potato, mushroom or green peas (+70p per addition).",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "modifiers": ["add-potato", "add-mushroom", "add-green-peas"],
+    "available": true
+  },
+  {
+    "id": "kodambakkam-curry",
+    "slug": "kodambakkam-curry",
+    "name": "Kodambakkam Curry",
+    "description": "Fresh coconut, panch puran (5 spices) finished with cream. A South Indian classic.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "lamb-makhanwala",
+    "slug": "lamb-makhanwala",
+    "name": "Lamb Makhanwala",
+    "description": "A staple Indian dish with a smooth and velvety vine tomato, cashew nuts, honey and cream based sauce.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": [],
+    "available": true
+  },
+  {
+    "id": "keema-mattar",
+    "slug": "keema-mattar",
+    "name": "Keema Mattar",
+    "description": "Fresh minced lamb cooked with onion, tomatoes, ginger and garlic along with green peas, garam masala and a touch of green chilli.",
+    "categories": ["lamb-curries"],
+    "price": 14.95,
+    "currency": "GBP",
+    "spiceLevel": 2,
+    "dietary": [],
+    "available": true
+  }
+]

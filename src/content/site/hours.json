@@ -1,0 +1,14 @@
+{
+  "timezone": "Europe/London",
+  "regular": [
+    { "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"], "open": "12:00", "close": "22:00" },
+    { "days": ["Friday", "Saturday"], "open": "12:00", "close": "23:00" }
+  ],
+  "notes": [
+    "Sit-in service available during all opening hours.",
+    "Lunch menus available 12:00–15:00.",
+    "Pre-theatre menu available early evening — see menu for current times."
+  ],
+  "holidayHours": [],
+  "closureNotices": []
+}

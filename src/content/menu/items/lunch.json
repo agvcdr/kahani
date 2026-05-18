@@ -1,0 +1,104 @@
+{
+  "oneCourse": {
+    "price": 12.95,
+    "availability": "12:00–14:00",
+    "description": "One course lunch — choose from the following.",
+    "items": [
+      {
+        "id": "lunch-lamb-seekh-roll",
+        "name": "Lamb Seekh Kebab Roll",
+        "description": "Minced lamb and chicken with onion and pepper served wrapped in thin Indian bread.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-chicken-tikka-kathi-roll",
+        "name": "Chicken Tikka Kathi Roll",
+        "description": "Chicken tikka tempered with julienne of vegetables wrapped in thin Indian bread.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-tandoori-chicken-tikka",
+        "name": "Tandoori Chicken Tikka",
+        "description": "Marinated chicken tikka cooked in the clay oven accompanied with mint chutney.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-paneer-kathi-roll",
+        "name": "Paneer Kathi Roll",
+        "description": "Homemade cottage cheese wrapped in thin Indian bread with spicy mint chutney on the side.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "id": "lunch-chicken-karahi",
+        "name": "Chicken Karahi",
+        "description": "Cooked with onion, pepper and tomatoes. Served with steamed rice or plain naan.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-chicken-korma",
+        "name": "Chicken Korma",
+        "description": "Chicken breast with tomato, onion, almond and coconut with a touch of cream. Served with steamed rice or plain naan.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-chicken-tikka-masala",
+        "name": "Chicken Tikka Masala",
+        "description": "Charcoal-grilled chicken tikka cooked with tomato, onions, cashew nuts and cream. Served with steamed rice or plain naan.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-lamb-jalfrezi",
+        "name": "Lamb Jalfrezi",
+        "description": "Julienne of ginger, tomato and bell peppers in a tangy sauce. Served with steamed rice or plain naan.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-old-school-lamb-curry",
+        "name": "Old School Lamb Curry",
+        "description": "Slow cooked lamb with onion, tomato, ginger, garlic and made with lots of love! Served with steamed rice or plain naan.",
+        "dietary": []
+      },
+      {
+        "id": "lunch-paneer-kadhai",
+        "name": "Paneer Kadhai",
+        "description": "Homemade cottage cheese cooked with pepper, onion and tomato. Served with steamed rice or plain naan.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "id": "lunch-dal-makhani",
+        "name": "Dal Makhani",
+        "description": "Black lentils cooked overnight with tomato, butter and cream. Served with steamed rice or plain naan.",
+        "dietary": ["vegetarian"]
+      }
+    ]
+  },
+  "twoCourse": {
+    "price": 14.95,
+    "availability": "12:00–15:00",
+    "description": "Two course lunch including poppadoms & chutney.",
+    "preStarter": "Poppadoms & Chutney",
+    "starters": [
+      { "id": "lunch2-veg-pakora",         "name": "Vegetable Pakora",     "description": "Julienne of vegetables in a crisp batter coating with ground spices.", "dietary": ["vegetarian"] },
+      { "id": "lunch2-lamb-seekh-kebab",   "name": "Lamb Seekh Kebab",     "description": "Spiced mince chicken and lamb, cooked in the tandoor.", "dietary": [] },
+      { "id": "lunch2-chicken-pakora",     "name": "Chicken Pakora",       "description": "Marinated chicken in a crisp gram flour batter.", "dietary": [] },
+      { "id": "lunch2-aloo-chana-chaat",   "name": "Aloo Chana Chaat",     "description": "Spiced potato and chickpea with a mint, tamarind and sweet chilli dressing. Served cold.", "dietary": ["vegetarian"] },
+      { "id": "lunch2-fish-pakora",        "name": "Fish Pakora",          "description": "Marinated white fish in a crisp gram flour batter.", "dietary": [] },
+      { "id": "lunch2-chicken-tikka",      "name": "Chicken Tikka",        "description": "Marinated with ginger, garlic and green chilli.", "dietary": [] }
+    ],
+    "mains": [
+      { "id": "lunch2-chicken-karahi",          "name": "Chicken Karahi",              "description": "Cooked with onion, pepper and tomatoes." },
+      { "id": "lunch2-old-school-lamb-curry",   "name": "Old School Lamb Curry",       "description": "Slow cooked lamb with onion, tomato, ginger, garlic and lots of love!" },
+      { "id": "lunch2-chicken-korma",           "name": "Chicken Korma",               "description": "Chicken breast with tomato, onion, almond and coconut with a touch of cream." },
+      { "id": "lunch2-chicken-tikka-masala",    "name": "Chicken Tikka Masala",        "description": "Charcoal-grilled chicken tikka cooked with tomato, onions, cashew nuts and cream." },
+      { "id": "lunch2-lamb-jalfrezi",           "name": "Lamb Jalfrezi",               "description": "Julienne of ginger, tomato and bell peppers in a tangy sauce." },
+      { "id": "lunch2-paneer-kadhai",           "name": "Paneer Kadhai",               "description": "Homemade cottage cheese cooked with pepper, onion and tomato.", "dietary": ["vegetarian"] },
+      { "id": "lunch2-gobhi-aloo",              "name": "Gobhi Aloo",                  "description": "Cauliflower and potato cooked with a tomato based sauce.", "dietary": ["vegetarian"] },
+      { "id": "lunch2-dal-tarka",               "name": "Dal Tarka",                   "description": "Spiced yellow lentil tempered with onion, garlic and fresh coriander.", "dietary": ["vegetarian"] }
+    ],
+    "sundries": {
+      "note": "Choose one.",
+      "options": ["Boiled Rice", "Pilau Rice", "Plain Naan", "Garlic Naan"]
+    }
+  },
+  "currency": "GBP"
+}

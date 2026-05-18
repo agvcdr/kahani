@@ -1,0 +1,22 @@
+{
+  "address": {
+    "line1": "10 Antigua Street",
+    "city": "Edinburgh",
+    "postcode": "EH1 3NH",
+    "country": "Scotland",
+    "countryCode": "GB"
+  },
+  "formatted": "10 Antigua Street, Edinburgh EH1 3NH",
+  "neighbourhood": "New Town / City Centre",
+  "nearbyLandmarks": [
+    "5 minutes from St. James Quarter",
+    "Near Edinburgh Playhouse"
+  ],
+  "mapUrl": "https://maps.google.com/?q=10+Antigua+Street+Edinburgh+EH1+3NH",
+  "coordinates": {
+    "lat": 55.9574,
+    "lng": -3.1857
+  },
+  "parking": null,
+  "transport": null
+}

@@ -1,0 +1,21 @@
+{
+  "allergenDefinitions": [
+    { "id": "celery",         "label": "Celery" },
+    { "id": "gluten",         "label": "Gluten (Cereals containing gluten)" },
+    { "id": "crustaceans",    "label": "Crustaceans" },
+    { "id": "egg",            "label": "Eggs" },
+    { "id": "fish",           "label": "Fish" },
+    { "id": "lupin",          "label": "Lupin" },
+    { "id": "milk",           "label": "Milk / Dairy" },
+    { "id": "molluscs",       "label": "Molluscs" },
+    { "id": "mustard",        "label": "Mustard" },
+    { "id": "nuts",           "label": "Tree Nuts" },
+    { "id": "peanuts",        "label": "Peanuts" },
+    { "id": "sesame",         "label": "Sesame Seeds" },
+    { "id": "soya",           "label": "Soya" },
+    { "id": "sulphur-dioxide","label": "Sulphur Dioxide / Sulphites" }
+  ],
+  "note": "A full allergen chart is available at the restaurant. Some allergens marked as present through shared equipment. Always inform your server of any allergies.",
+  "allergenChartUrl": "https://kahanirestaurant.co.uk/wp-content/uploads/2025/10/allergen-chart.pdf",
+  "sharedEquipmentWarning": "Some items are marked as containing allergens through shared equipment even where the ingredient is not intentionally added to the dish."
+}

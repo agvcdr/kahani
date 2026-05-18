@@ -1,0 +1,33 @@
+{
+  "titleTemplate": "%s | Kahani Indian Street Food Edinburgh",
+  "defaultTitle": "Kahani Indian Street Food Edinburgh | Award-Winning Indian Restaurant",
+  "defaultDescription": "Award-winning Indian street food restaurant in Edinburgh's New Town. Authentic curries, tandoori grills, biryanis and more. Book a table or order online.",
+  "keywords": [
+    "Indian restaurant Edinburgh",
+    "Indian street food Edinburgh",
+    "best Indian restaurant Edinburgh",
+    "curry Edinburgh",
+    "tandoori Edinburgh",
+    "biryani Edinburgh",
+    "halal Edinburgh",
+    "kahani Edinburgh",
+    "Antigua Street Edinburgh",
+    "Scottish Curry Awards"
+  ],
+  "structuredData": {
+    "@type": "Restaurant",
+    "name": "Kahani Indian Street Food Edinburgh",
+    "cuisine": "Indian",
+    "address": {
+      "streetAddress": "10 Antigua Street",
+      "addressLocality": "Edinburgh",
+      "postalCode": "EH1 3NH",
+      "addressCountry": "GB"
+    },
+    "telephone": "01315581947",
+    "email": "info@kahanirestaurant.co.uk",
+    "url": "https://kahanirestaurant.co.uk",
+    "priceRange": "££"
+  },
+  "ogImage": null
+}

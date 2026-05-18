@@ -1,0 +1,54 @@
+{
+  "mocktails": [
+    { "id": "peach-cooler",       "name": "Peach Cooler",             "price": 5.45, "description": "Muddled lime wedges with mint, shaken with peach puree topped with apple juice." },
+    { "id": "anardrana-punch",    "name": "Anardrana Punch",          "price": 5.45, "description": "Pomegranate, grenadine and lychee juice muddled with mint leaf served over ice." },
+    { "id": "mojito-lime",        "name": "Mojito (Lime)",            "price": 5.75, "description": "Lime wedges muddled with mint and flavoured with lime." },
+    { "id": "mojito-mango",       "name": "Mojito (Mango)",           "price": 5.75, "description": "Lime wedges muddled with mint and flavoured with mango." },
+    { "id": "mojito-pineapple",   "name": "Mojito (Pineapple)",       "price": 5.75, "description": "Lime wedges muddled with mint and flavoured with pineapple." },
+    { "id": "indian-sunrise",     "name": "Indian Sunrise",           "price": 5.45, "description": "Strawberry, lychee and fresh lime, shaken with mint and a hint of green chilli." },
+    { "id": "blue-hawaiian",      "name": "Blue Hawaiian",            "price": 5.75, "description": "Blended pineapple juice and coconut milk with blue curacao." },
+    { "id": "mango-lassi",        "name": "Mango Lassi",              "price": 5.45, "description": "Natural yoghurt and puréed mango.", "dietary": ["vegetarian"] },
+    { "id": "spiced-mango-lassi", "name": "Spiced Mango Lassi",       "price": 5.45, "description": "Natural yoghurt, puréed mango and ginger.", "dietary": ["vegetarian"] },
+    { "id": "scanjbi",            "name": "Scanjbi",                  "price": 5.45, "description": "Indian style lemonade with a hint of mint.", "dietary": ["vegetarian", "vegan"] }
+  ],
+  "hotDrinks": [
+    { "id": "tea",            "name": "Tea",              "price": 2.95, "description": "Assorted flavours." },
+    { "id": "desi-chai",      "name": "Desi Chai",        "price": null,  "note": "Price on menu — please confirm with restaurant." },
+    { "id": "single-espresso","name": "Single Espresso",  "price": 2.50 },
+    { "id": "double-espresso","name": "Double Espresso",  "price": 2.95 },
+    { "id": "cappuccino",     "name": "Cappuccino",       "price": 3.50 },
+    { "id": "black-coffee",   "name": "Black Coffee",     "price": 2.95 },
+    { "id": "white-coffee",   "name": "White Coffee",     "price": 3.50 },
+    { "id": "hot-chocolate",  "name": "Hot Chocolate",    "price": 3.50 },
+    { "id": "latte",          "name": "Latte",            "price": 3.50 }
+  ],
+  "softDrinks": [
+    { "id": "coke",            "name": "Coke",            "size": "330ml", "price": 3.45 },
+    { "id": "diet-coke",       "name": "Diet Coke",       "size": "330ml", "price": 3.45 },
+    { "id": "coke-zero",       "name": "Coke Zero",       "size": "330ml", "price": 3.45 },
+    { "id": "fanta",           "name": "Fanta",           "size": "330ml", "price": 3.45 },
+    { "id": "sprite",          "name": "Sprite",          "size": "330ml", "price": 3.45 },
+    { "id": "irn-bru",         "name": "Irn Bru",         "size": "330ml", "price": 3.45 },
+    { "id": "mineral-water-s", "name": "Mineral Water",   "size": "Small", "price": 3.35 },
+    { "id": "mineral-water-l", "name": "Mineral Water",   "size": "Large", "price": 5.45 },
+    { "id": "sparkling-water-s","name": "Sparkling Water", "size": "Small","price": 3.35 },
+    { "id": "sparkling-water-l","name": "Sparkling Water", "size": "Large","price": 5.45 },
+    { "id": "soda",            "name": "Soda",            "price": 3.45 },
+    { "id": "lime-cordial",    "name": "Lime Cordial",    "price": 4.00 },
+    { "id": "blackcurrant",    "name": "Blackcurrant",    "price": 4.00 },
+    { "id": "lemonade",        "name": "Lemonade",        "price": 4.00 },
+    { "id": "ginger-beer",     "name": "Ginger Beer",     "price": 4.00 }
+  ],
+  "desserts": [
+    { "id": "hot-chocolate-brownie",  "name": "Hot Chocolate Fudge Brownie", "price": 6.45, "description": "Served with vanilla ice cream & chocolate sauce.", "dietary": ["vegetarian"] },
+    { "id": "mango-kheer",            "name": "Mango Kheer",                  "price": 6.00, "description": "Indian rice pudding flavoured with fresh mango and cardamom.", "dietary": ["vegetarian"] },
+    { "id": "gulab-jamun",            "name": "Gulab Jamun",                  "price": 6.00, "description": "Cardamom infused cake served with ice cream.", "dietary": ["vegetarian"] },
+    { "id": "ice-cream-sundae",       "name": "Ice Cream Sundae Bonanza",     "price": 7.45, "description": "Our selection of ice cream with marshmallows, meringue and a mango and raspberry coulis.", "dietary": ["vegetarian"] },
+    { "id": "mango-kulfi",            "name": "Mango Kulfi",                  "price": 6.45, "description": "Traditional Indian ice cream.", "dietary": ["vegetarian"] },
+    { "id": "pistachio-kulfi",        "name": "Pistachio Kulfi",              "price": 6.45, "description": "Traditional Indian ice cream.", "dietary": ["vegetarian"] },
+    { "id": "ice-cream-selection",    "name": "Selection of Ice Cream",       "price": 5.00, "description": "Chocolate, Strawberry or Vanilla.", "dietary": ["vegetarian"] },
+    { "id": "sorbet-selection",       "name": "Selection of Sorbet",          "price": 5.00, "description": "Orange, lime or mango.", "dietary": ["vegetarian", "vegan"] },
+    { "id": "cheesecake",             "name": "Cheesecake",                   "price": 6.00, "description": "Cream cheese, wheat flour, honey & raspberry sauce.", "dietary": ["vegetarian"] }
+  ],
+  "currency": "GBP"
+}

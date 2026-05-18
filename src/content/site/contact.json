@@ -1,0 +1,20 @@
+{
+  "phone": "0131 558 1947",
+  "email": "info@kahanirestaurant.co.uk",
+  "social": {
+    "facebook": {
+      "handle": "@KahaniIndianRestaurant",
+      "url": "https://www.facebook.com/KahaniIndianRestaurant/"
+    },
+    "instagram": {
+      "handle": "@kahaniindianrestaurant",
+      "url": "https://www.instagram.com/kahaniindianrestaurant/"
+    },
+    "tripadvisor": {
+      "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g186525-d15855974-Reviews-Kahani_Indian_Restaurant-Edinburgh_Scotland.html"
+    },
+    "yelp": {
+      "url": "https://www.yelp.com/biz/kahani-indian-restaurant-edinburgh-2"
+    }
+  }
+}

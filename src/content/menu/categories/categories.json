@@ -1,0 +1,140 @@
+[
+  {
+    "id": "starters-traditional",
+    "slug": "traditional-starters",
+    "label": "Traditional Starters",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 1
+  },
+  {
+    "id": "starters-signature",
+    "slug": "signature-starters",
+    "label": "Signature Starters",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 2
+  },
+  {
+    "id": "tandoori-grill",
+    "slug": "tandoori-grill",
+    "label": "Tandoori Grill",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 3
+  },
+  {
+    "id": "seafood-curries",
+    "slug": "seafood-curries",
+    "label": "Seafood Curries",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 4
+  },
+  {
+    "id": "chicken-curries",
+    "slug": "chicken-curries",
+    "label": "Chicken Curries",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 5
+  },
+  {
+    "id": "lamb-curries",
+    "slug": "lamb-curries",
+    "label": "Lamb Curries",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 6
+  },
+  {
+    "id": "vegetable-dishes",
+    "slug": "vegetable-dishes",
+    "label": "Vegetable Dishes",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 7
+  },
+  {
+    "id": "biryani",
+    "slug": "biryani",
+    "label": "Hyderabadi Biryani",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 8
+  },
+  {
+    "id": "breads",
+    "slug": "breads",
+    "label": "Breads",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 9
+  },
+  {
+    "id": "rice",
+    "slug": "rice",
+    "label": "Rice",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 10
+  },
+  {
+    "id": "accompaniments",
+    "slug": "accompaniments",
+    "label": "Accompaniments",
+    "parentMenu": "a-la-carte",
+    "sortOrder": 11
+  },
+  {
+    "id": "drinks",
+    "slug": "drinks",
+    "label": "Drinks",
+    "parentMenu": "drinks-desserts",
+    "sortOrder": 1
+  },
+  {
+    "id": "desserts",
+    "slug": "desserts",
+    "label": "Desserts",
+    "parentMenu": "drinks-desserts",
+    "sortOrder": 2
+  },
+  {
+    "id": "kids",
+    "slug": "kids",
+    "label": "Kids Menu",
+    "parentMenu": "kids",
+    "sortOrder": 1
+  },
+  {
+    "id": "lunch-one-course",
+    "slug": "lunch-one-course",
+    "label": "Lunch — One Course",
+    "parentMenu": "lunch",
+    "description": "Available 12:00–14:00. One course £12.95.",
+    "sortOrder": 1
+  },
+  {
+    "id": "lunch-two-course",
+    "slug": "lunch-two-course",
+    "label": "Lunch — Two Course",
+    "parentMenu": "lunch",
+    "description": "Available 12:00–15:00. Two courses £14.95 including poppadoms & chutney.",
+    "sortOrder": 2
+  },
+  {
+    "id": "pre-theatre",
+    "slug": "pre-theatre",
+    "label": "Pre-Theatre Menu",
+    "parentMenu": "pre-theatre",
+    "description": "£19.95 per person. Starter, main and sundry — great value before an evening show.",
+    "sortOrder": 1
+  },
+  {
+    "id": "party",
+    "slug": "party",
+    "label": "Party Menu",
+    "parentMenu": "party",
+    "description": "Banquet style dining at £24.95 per person. Main dishes presented together and shared.",
+    "sortOrder": 1
+  },
+  {
+    "id": "afternoon-tea",
+    "slug": "afternoon-tea",
+    "label": "Afternoon Tea",
+    "parentMenu": "afternoon-tea",
+    "description": "£39.99 for 2. BYOB. Served with bottomless traditional Indian tea or English breakfast tea/coffee.",
+    "sortOrder": 1
+  }
+]

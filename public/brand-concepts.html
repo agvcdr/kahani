@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kahani — Logo Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Montserrat:wght@300;400;600;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #F2EDE6;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #1A1A1A;
+      padding: 56px 24px 80px;
+      min-height: 100vh;
+    }
+
+    .page-header {
+      max-width: 780px;
+      margin: 0 auto 60px;
+    }
+    .page-header .eyebrow {
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: #1A1A1A;
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+    .page-header p {
+      font-size: 13px;
+      color: #888;
+      letter-spacing: 1px;
+    }
+
+    .concepts {
+      max-width: 780px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 52px;
+    }
+
+    .concept-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+    }
+
+    .concept-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 52px 40px;
+    }
+    .concept-preview svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .concept-meta {
+      border-top: 1px solid #F0EBE3;
+      padding: 28px 36px;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .concept-number {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #C9A028;
+      font-weight: 700;
+      padding-top: 3px;
+    }
+    .concept-name {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1A1A1A;
+    }
+    .concept-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .concept-desc em { font-style: italic; color: #444; }
+    .concept-use {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #AAA;
+      margin-bottom: 14px;
+    }
+
+    .swatches { display: flex; gap: 8px; align-items: center; }
+    .swatch {
+      width: 22px; height: 22px; border-radius: 50%;
+      border: 1.5px solid rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+    .swatch-label {
+      font-size: 10px;
+      color: #BBB;
+      margin-left: 6px;
+      letter-spacing: 1px;
+    }
+
+    .page-footer {
+      text-align: center;
+      margin-top: 64px;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #C0BAB2;
+      text-transform: uppercase;
+    }
+
+    /* Preview backgrounds per concept */
+    .bg-heritage  { background: #1E0808; }
+    .bg-modern    { background: #F7F7F5; }
+    .bg-story     { background: #FDF6EC; }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <p class="eyebrow">Brand Identity — Logo Concepts</p>
+  <h1>Kahani Indian Street Food</h1>
+  <p>Three directions for review — Edinburgh, Scotland &nbsp;·&nbsp; 2026</p>
+</header>
+
+<div class="concepts">
+
+  <!-- ═══════════════════════════════════════════════
+       CONCEPT 1 — THE HERITAGE
+  ═══════════════════════════════════════════════ -->
+  <div class="concept-card">
+    <div class="concept-preview bg-heritage">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 210" width="560" height="210">
+        <defs>
+          <style>
+            .h-title { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+            .h-sub   { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+          </style>
+        </defs>
+
+        <!-- Top rule + diamond -->
+        <line x1="60"  y1="34" x2="246" y2="34" stroke="#C9A028" stroke-width="0.9" opacity="0.6"/>
+        <polygon points="280,25 287,34 280,43 273,34" fill="#C9A028"/>
+        <line x1="314" y1="34" x2="500" y2="34" stroke="#C9A028" stroke-width="0.9" opacity="0.6"/>
+        <text x="58"  y="38" text-anchor="middle" fill="#C9A028" font-size="9" opacity="0.5" font-family="serif">✦</text>
+        <text x="502" y="38" text-anchor="middle" fill="#C9A028" font-size="9" opacity="0.5" font-family="serif">✦</text>
+
+        <!-- Main wordmark -->
+        <text class="h-title" x="280" y="112"
+          font-size="72" font-weight="700" fill="#C9A028"
+          text-anchor="middle" letter-spacing="16">KAHANI</text>
+
+        <!-- Mid rule + diamond -->
+        <line x1="80"  y1="130" x2="244" y2="130" stroke="#C9A028" stroke-width="0.9" opacity="0.45"/>
+        <polygon points="280,123 286,130 280,137 274,130" fill="#C9A028" opacity="0.85"/>
+        <line x1="316" y1="130" x2="480" y2="130" stroke="#C9A028" stroke-width="0.9" opacity="0.45"/>
+
+        <!-- Subtitle -->
+        <text class="h-sub" x="280" y="157"
+          font-size="11.5" font-weight="600" fill="#D4AA50"
+          text-anchor="middle" letter-spacing="7">INDIAN STREET FOOD</text>
+
+        <!-- Location -->
+        <text class="h-sub" x="280" y="180"
+          font-size="9" font-weight="400" fill="#7A4E1A"
+          text-anchor="middle" letter-spacing="5.5">EDINBURGH · SCOTLAND</text>
+
+        <!-- Bottom rule -->
+        <line x1="60" y1="197" x2="500" y2="197" stroke="#C9A028" stroke-width="0.6" opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="concept-meta">
+      <span class="concept-number">01</span>
+      <div>
+        <p class="concept-name">The Heritage</p>
+        <p class="concept-desc">
+          A premium, award-winning identity. Deep maroon with antique gold letterforms and ornamental rule details evoke the richness of Indian craft and the warmth of the restaurant. Well-suited to printed menus, signage, and formal event materials.
+        </p>
+        <p class="concept-use">Best for: menus &nbsp;·&nbsp; signage &nbsp;·&nbsp; events &nbsp;·&nbsp; gift vouchers</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#1E0808"  title="Deep Maroon"></div>
+          <div class="swatch" style="background:#C9A028"  title="Antique Gold"></div>
+          <div class="swatch" style="background:#D4AA50"  title="Warm Gold"></div>
+          <div class="swatch" style="background:#FFF8EF"  title="Cream"></div>
+          <span class="swatch-label">Deep Maroon · Antique Gold · Cream</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CONCEPT 2 — THE MODERN FLAME
+  ═══════════════════════════════════════════════ -->
+  <div class="concept-card">
+    <div class="concept-preview bg-modern">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 190" width="560" height="190">
+        <defs>
+          <style>
+            .m-title { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+          </style>
+        </defs>
+
+        <!-- Flame icon centred at (68, 95) -->
+        <g transform="translate(68,95)">
+          <!-- Outer flame -->
+          <path d="M0,-58 C-9,-42 -28,-26 -20,2 C-13,26 0,40 0,40
+                   C0,40 13,26 20,2 C28,-26 9,-42 0,-58 Z"
+                fill="#F4811F"/>
+          <!-- Mid flame -->
+          <path d="M0,-32 C-5,-20 -14,-8 -9,8 C-5,18 0,24 0,24
+                   C0,24 5,18 9,8 C14,-8 5,-20 0,-32 Z"
+                fill="#FFCB80" opacity="0.75"/>
+          <!-- Inner core -->
+          <path d="M0,-14 C-3,-6 -6,2 -4,10 C-2,16 0,19 0,19
+                   C0,19 2,16 4,10 C6,2 3,-6 0,-14 Z"
+                fill="#1C3D35" opacity="0.45"/>
+        </g>
+
+        <!-- KAHANI wordmark -->
+        <text class="m-title" x="118" y="82"
+          font-size="62" font-weight="800" fill="#1C3D35"
+          letter-spacing="5">KAHANI</text>
+
+        <!-- Saffron accent bar -->
+        <rect x="118" y="100" width="330" height="3.5" fill="#F4811F" rx="1.75"/>
+
+        <!-- Cuisine label -->
+        <text class="m-title" x="118" y="130"
+          font-size="12.5" font-weight="400" fill="#F4811F"
+          letter-spacing="6">INDIAN STREET FOOD</text>
+
+        <!-- City -->
+        <text class="m-title" x="120" y="158"
+          font-size="10" font-weight="300" fill="#8DB5AE"
+          letter-spacing="5">EDINBURGH</text>
+      </svg>
+    </div>
+    <div class="concept-meta">
+      <span class="concept-number">02</span>
+      <div>
+        <p class="concept-name">The Modern Flame</p>
+        <p class="concept-desc">
+          Clean, contemporary street-food energy. A stylised tandoor flame in saffron sits alongside a bold dark teal wordmark, separated by a vivid accent bar. Versatile across digital screens, social media, takeaway packaging, and outdoor signage.
+        </p>
+        <p class="concept-use">Best for: social media &nbsp;·&nbsp; online ordering &nbsp;·&nbsp; packaging &nbsp;·&nbsp; outdoor</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#1C3D35"  title="Deep Teal"></div>
+          <div class="swatch" style="background:#F4811F"  title="Saffron"></div>
+          <div class="swatch" style="background:#FFCB80"  title="Light Saffron"></div>
+          <div class="swatch" style="background:#8DB5AE"  title="Soft Teal"></div>
+          <span class="swatch-label">Deep Teal · Saffron · Soft Teal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CONCEPT 3 — THE STORY
+  ═══════════════════════════════════════════════ -->
+  <div class="concept-card">
+    <div class="concept-preview bg-story">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="560" height="220">
+        <defs>
+          <style>
+            .s-serif { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+            .s-sans  { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+          </style>
+          <!-- Circular text path for seal -->
+          <path id="topArc"    d="M 26,105 A 60,60 0 0,1 146,105" fill="none"/>
+          <path id="bottomArc" d="M 32,116 A 60,60 0 0,0 140,116" fill="none"/>
+        </defs>
+
+        <!-- Seal: outer ring -->
+        <circle cx="86" cy="108" r="76"  fill="none" stroke="#1A2744" stroke-width="2.5"/>
+        <circle cx="86" cy="108" r="68"  fill="none" stroke="#1A2744" stroke-width="0.7"/>
+        <!-- Seal: filled inner disc -->
+        <circle cx="86" cy="108" r="58"  fill="#1A2744"/>
+
+        <!-- K monogram -->
+        <text class="s-serif" x="86" y="130"
+          font-size="66" font-weight="700" fill="#C9A028"
+          text-anchor="middle">K</text>
+
+        <!-- Circular arc labels -->
+        <text class="s-sans" font-size="7.5" fill="#1A2744" letter-spacing="3.5" font-weight="600">
+          <textPath href="#topArc" startOffset="4%">K A H A N I   I N D I A N</textPath>
+        </text>
+        <text class="s-sans" font-size="7.5" fill="#1A2744" letter-spacing="3.5" font-weight="600">
+          <textPath href="#bottomArc" startOffset="8%">E D I N B U R G H</textPath>
+        </text>
+
+        <!-- Left/right diamonds on outer ring -->
+        <polygon points="10,108 14.5,113 19,108 14.5,103" fill="#C9A028" opacity="0.7"/>
+        <polygon points="153,108 157.5,113 162,108 157.5,103" fill="#C9A028" opacity="0.7"/>
+
+        <!-- Script wordmark -->
+        <text class="s-serif" x="196" y="98"
+          font-size="64" font-style="italic" font-weight="700" fill="#1A2744">Kahani</text>
+
+        <!-- Gold rule -->
+        <line x1="196" y1="114" x2="518" y2="114" stroke="#C9A028" stroke-width="1.8"/>
+
+        <!-- Cuisine -->
+        <text class="s-sans" x="196" y="140"
+          font-size="12" font-weight="600" fill="#C9A028"
+          letter-spacing="5.5">INDIAN STREET FOOD</text>
+
+        <!-- Brand line -->
+        <text x="196" y="170" fill="#A09070" font-size="12.5">
+          <tspan class="s-serif" font-style="italic">Kahani</tspan>
+          <tspan class="s-sans" font-size="11" font-weight="300" letter-spacing="0.5"> — a story worth tasting</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="concept-meta">
+      <span class="concept-number">03</span>
+      <div>
+        <p class="concept-name">The Story</p>
+        <p class="concept-desc">
+          <em>Kahani</em> means "story" in Hindi and Urdu. This concept builds the brand around that meaning — a <strong>K</strong> monogram seal on the left, elegant italic script for the name, and the line <em>"a story worth tasting."</em> Layered and narrative-driven; ideal for events, catering proposals, and high-end print.
+        </p>
+        <p class="concept-use">Best for: events &amp; catering &nbsp;·&nbsp; packaging &nbsp;·&nbsp; premium print &nbsp;·&nbsp; website hero</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#1A2744"  title="Deep Navy"></div>
+          <div class="swatch" style="background:#C9A028"  title="Antique Gold"></div>
+          <div class="swatch" style="background:#A09070"  title="Warm Stone"></div>
+          <div class="swatch" style="background:#FDF6EC"  title="Warm Cream"></div>
+          <span class="swatch-label">Deep Navy · Antique Gold · Warm Cream</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="page-footer">Kahani Indian Street Food &nbsp;·&nbsp; Edinburgh &nbsp;·&nbsp; Brand Concepts 2026</p>
+
+</body>
+</html>
