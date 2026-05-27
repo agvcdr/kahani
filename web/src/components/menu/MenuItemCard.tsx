@@ -7,6 +7,14 @@ import { AllergenList } from './AllergenList'
 export function MenuItemCard({ item }: { item: SanityMenuItem }) {
   return (
     <article className={`menu-item${item.soldOut ? ' menu-item--sold-out' : ''}${item.seasonal ? ' menu-item--seasonal' : ''}`}>
+      <div className="menu-item__img-wrap">
+        {item.image?.url
+          ? /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={item.image.url} alt={item.image.alt ?? item.name} className="menu-item__img" loading="lazy" />
+          : <div className="menu-item__img-placeholder" aria-hidden="true" />
+        }
+      </div>
+
       <div className="menu-item__header">
         <div className="menu-item__title-row">
           <h3 className="menu-item__name">
