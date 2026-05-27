@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "menu-item.schema.json",
+  "title": "MenuItem",
+  "description": "A single item on the Kahani menu.",
+  "type": "object",
+  "required": ["id", "slug", "name", "categories", "dietary", "allergens", "available"],
+  "additionalProperties": true,
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable kebab-case identifier. Never changes once published."
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "URL-safe slug, kebab-case."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "categories": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "One or more category ids from categories.json."
+    },
+    "prices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["context", "amount"],
+        "additionalProperties": false,
+        "properties": {
+          "context": {
+            "type": "string",
+            "description": "e.g. standard, starter, grill-main, main, side, per-person, for-two."
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "priceOnRequest": {
+      "type": "boolean",
+      "description": "True when the price cannot be listed and must be requested (e.g. included items, unlisted price)."
+    },
+    "currency": {
+      "type": "string",
+      "default": "GBP",
+      "description": "ISO 4217 currency code."
+    },
+    "spiceLevel": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 5,
+      "description": "0 = not spicy, 5 = very hot."
+    },
+    "dietary": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["vegetarian", "vegan", "gluten-free"]
+      },
+      "description": "Positive dietary claims only. Absence does not imply unsuitability — confirm with restaurant."
+    },
+    "allergens": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "celery",
+          "gluten",
+          "crustaceans",
+          "egg",
+          "fish",
+          "lupin",
+          "milk",
+          "molluscs",
+          "mustard",
+          "nuts",
+          "peanuts",
+          "sesame",
+          "soya",
+          "sulphur-dioxide"
+        ]
+      },
+      "description": "Allergen ids present in this dish. References allergens.json."
+    },
+    "available": {
+      "type": "boolean"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Position within the category. Lower numbers appear first."
+    },
+    "imageRef": {
+      "type": ["string", "null"],
+      "description": "Path or asset reference for the item image."
+    },
+    "imageAlt": {
+      "type": ["string", "null"],
+      "description": "Accessible alt text for the item image."
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "True for items highlighted on the home page or top of section."
+    },
+    "seasonal": {
+      "type": "boolean",
+      "description": "True when the item is only available at certain times of year."
+    },
+    "soldOut": {
+      "type": "boolean",
+      "description": "True when the item is temporarily unavailable."
+    },
+    "serves": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of people the portion serves, for sharing dishes."
+    },
+    "modifiers": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Modifier ids from modifiers.json that apply to this item."
+    },
+    "size": {
+      "type": "string",
+      "description": "Portion or container size label, e.g. 330ml, Small, Large."
+    }
+  }
+}

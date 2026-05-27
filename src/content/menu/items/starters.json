@@ -5,11 +5,20 @@
     "name": "Old School Vegetable Pakora",
     "description": "Potato and onion coated in gram and self-raising flour, served with chilli or meat sauce.",
     "categories": ["starters-traditional"],
-    "price": 5.95,
+    "prices": [
+      { "context": "standard", "amount": 5.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "onion-bhaji",
@@ -17,11 +26,20 @@
     "name": "Onion Bhaji",
     "description": "Traditional recipe of green chilli, gram flour and garam masala.",
     "categories": ["starters-traditional"],
-    "price": 5.95,
+    "prices": [
+      { "context": "standard", "amount": 5.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "aloo-mattar-ki-tikki",
@@ -29,11 +47,20 @@
     "name": "Aloo Mattar ki Tikki",
     "description": "Shallow fried potatoes & green peas tikki (patty).",
     "categories": ["starters-traditional"],
-    "price": 6.95,
+    "prices": [
+      { "context": "standard", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "vegetable-samosa",
@@ -41,11 +68,20 @@
     "name": "Vegetable Samosa",
     "description": "Pastry parcel stuffed with potatoes and green peas.",
     "categories": ["starters-traditional"],
-    "price": 5.95,
+    "prices": [
+      { "context": "standard", "amount": 5.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chutney-paneer-tikka",
@@ -53,12 +89,21 @@
     "name": "Chutney Paneer Tikka",
     "description": "Chargrilled homemade cheese marinated with fresh mint, green chilli, carom seeds and ginger garlic.",
     "categories": ["starters-traditional", "tandoori-grill"],
-    "price": 7.95,
-    "priceGrill": 15.95,
+    "prices": [
+      { "context": "starter", "amount": 7.95 },
+      { "context": "grill-main", "amount": 15.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "stuffed-tandoori-mushroom",
@@ -66,11 +111,20 @@
     "name": "Stuffed Tandoori Mushroom",
     "description": "Stuffed with cheese and chopped spices. Cooked in the clay oven.",
     "categories": ["starters-traditional"],
-    "price": 7.25,
+    "prices": [
+      { "context": "standard", "amount": 7.25 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "badal-jaam",
@@ -78,11 +132,20 @@
     "name": "Badal Jaam",
     "description": "Grilled aubergine topped with tomato masala, cheese, celery and cumin flavoured yoghurt.",
     "categories": ["starters-signature"],
-    "price": 7.25,
+    "prices": [
+      { "context": "standard", "amount": 7.25 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "aloo-chana-chaat",
@@ -90,11 +153,20 @@
     "name": "Aloo & Chana Chaat",
     "description": "Spiced potato and chickpea with a mint, tamarind, yoghurt, and sweet chilli dressing.",
     "categories": ["starters-signature"],
-    "price": 6.50,
+    "prices": [
+      { "context": "standard", "amount": 6.50 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "pakora-chaat",
@@ -102,11 +174,20 @@
     "name": "Pakora Chaat",
     "description": "Vegetable pakora with spiced chickpea, mint, yoghurt, tamarind and sweet chilli dressing.",
     "categories": ["starters-signature"],
-    "price": 6.95,
+    "prices": [
+      { "context": "standard", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "veg-samosa-chaat",
@@ -114,11 +195,20 @@
     "name": "Veg Samosa Chaat",
     "description": "Crushed samosa with spiced chickpea, mint, tamarind, yoghurt, and sweet chilli dressing.",
     "categories": ["starters-signature"],
-    "price": 6.95,
+    "prices": [
+      { "context": "standard", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 10,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "crispy-chilli-mushroom",
@@ -126,11 +216,20 @@
     "name": "Crispy Chilli Mushroom",
     "description": "Stuffed with cheese, green chilli, ginger, garlic & finished with crispy coating.",
     "categories": ["starters-signature"],
-    "price": 7.25,
+    "prices": [
+      { "context": "standard", "amount": 7.25 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 11,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "crispy-chilli-squid",
@@ -138,11 +237,20 @@
     "name": "Crispy Chilli Squid",
     "description": "Marinated with crushed chilli and freshly ground spice.",
     "categories": ["starters-signature"],
-    "price": 7.25,
+    "prices": [
+      { "context": "standard", "amount": 7.25 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 12,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "fish-koliwada",
@@ -150,11 +258,20 @@
     "name": "Fish Koliwada",
     "description": "Marinated in a spice blend, carom seeds and coated in gram flour batter, fried till crunchy.",
     "categories": ["starters-signature"],
-    "price": 7.25,
+    "prices": [
+      { "context": "standard", "amount": 7.25 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 13,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "achari-salmon-starter",
@@ -162,23 +279,42 @@
     "name": "Achari Salmon",
     "description": "Marinated with yoghurt, ginger, chilli and homemade pickle.",
     "categories": ["starters-signature"],
-    "price": 8.50,
+    "prices": [
+      { "context": "standard", "amount": 8.50 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 14,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
-    "id": "pepper-monkfish-tikka-starter",
-    "slug": "pepper-monkfish-tikka-starter",
+    "id": "pepper-monkfish-tikka",
+    "slug": "pepper-monkfish-tikka",
     "name": "Pepper Monkfish Tikka",
     "description": "Monkfish marinated with cheese, yoghurt and crushed black pepper.",
-    "categories": ["starters-signature"],
-    "price": 8.50,
+    "categories": ["starters-signature", "tandoori-grill"],
+    "prices": [
+      { "context": "starter", "amount": 8.50 },
+      { "context": "grill-main", "amount": 16.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 15,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "prawn-kolhapuri",
@@ -186,47 +322,86 @@
     "name": "Prawn Kolhapuri",
     "description": "Marinated with curry leaves, cumin and a crisp chickpea flour coating.",
     "categories": ["starters-signature"],
-    "price": 7.95,
+    "prices": [
+      { "context": "standard", "amount": 7.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 16,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
-    "id": "tandoori-king-prawn-starter",
-    "slug": "tandoori-king-prawn-starter",
+    "id": "tandoori-king-prawn",
+    "slug": "tandoori-king-prawn",
     "name": "Tandoori King Prawn",
     "description": "King prawns marinated with mustard, fresh green chilli, ginger, garlic and soft cheese.",
-    "categories": ["starters-signature"],
-    "price": 8.95,
+    "categories": ["starters-signature", "tandoori-grill"],
+    "prices": [
+      { "context": "starter", "amount": 8.95 },
+      { "context": "grill-main", "amount": 17.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 17,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
-    "id": "hyderabadi-chicken-tikka-starter",
-    "slug": "hyderabadi-chicken-tikka-starter",
+    "id": "hyderabadi-chicken-tikka",
+    "slug": "hyderabadi-chicken-tikka",
     "name": "Hyderabadi Chicken Tikka",
     "description": "Boneless chicken marinated with yoghurt, garlic, ginger and deggi mirch.",
-    "categories": ["starters-signature"],
-    "price": 7.95,
+    "categories": ["starters-signature", "tandoori-grill"],
+    "prices": [
+      { "context": "starter", "amount": 7.95 },
+      { "context": "grill-main", "amount": 15.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 18,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
-    "id": "mango-chicken-tikka-starter",
-    "slug": "mango-chicken-tikka-starter",
+    "id": "mango-chicken-tikka",
+    "slug": "mango-chicken-tikka",
     "name": "Mango Chicken Tikka",
     "description": "Chicken breast marinated with ginger, garlic, green chilli and hint of mango.",
-    "categories": ["starters-signature"],
-    "price": 7.95,
+    "categories": ["starters-signature", "tandoori-grill"],
+    "prices": [
+      { "context": "starter", "amount": 7.95 },
+      { "context": "grill-main", "amount": 15.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 19,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "dohra-seekh",
@@ -234,11 +409,20 @@
     "name": "Dohra Seekh",
     "description": "Chicken and lamb mince infused with garlic, ginger and freshly ground spices.",
     "categories": ["starters-signature"],
-    "price": 7.25,
+    "prices": [
+      { "context": "standard", "amount": 7.25 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 20,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chicken-pakora",
@@ -246,11 +430,20 @@
     "name": "Chicken Pakora",
     "description": "Strips of chicken fillet marinated, battered and deep-fried.",
     "categories": ["starters-signature"],
-    "price": 5.95,
+    "prices": [
+      { "context": "standard", "amount": 5.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 21,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "fish-pakora",
@@ -258,23 +451,42 @@
     "name": "Fish Pakora",
     "description": "Marinated white fish in a crisp gram flour batter.",
     "categories": ["starters-signature"],
-    "price": 5.95,
+    "prices": [
+      { "context": "standard", "amount": 5.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 22,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
-    "id": "tandoori-lamb-chops-starter",
-    "slug": "tandoori-lamb-chops-starter",
+    "id": "tandoori-lamb-chops",
+    "slug": "tandoori-lamb-chops",
     "name": "Tandoori Lamb Chops",
     "description": "Marinated with honey and fresh green chilli. Served with green chutney.",
-    "categories": ["starters-signature"],
-    "price": 8.95,
+    "categories": ["starters-signature", "tandoori-grill"],
+    "prices": [
+      { "context": "starter", "amount": 8.95 },
+      { "context": "grill-main", "amount": 17.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 23,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "triple-platter",
@@ -282,12 +494,20 @@
     "name": "Triple Platter Starter",
     "description": "Aloo & Chana Chaat, Chicken Pakora & Chilli Squid. Serves 2.",
     "categories": ["starters-signature"],
-    "price": 15.95,
+    "prices": [
+      { "context": "standard", "amount": 15.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "serves": 2,
+    "allergens": [],
+    "available": true,
+    "sortOrder": 24,
+    "imageRef": null,
+    "imageAlt": null,
     "featured": true,
-    "available": true
+    "seasonal": false,
+    "soldOut": false,
+    "serves": 2
   }
 ]

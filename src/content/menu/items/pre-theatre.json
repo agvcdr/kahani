@@ -1,53 +1,73 @@
 {
   "id": "pre-theatre",
+  "slug": "pre-theatre",
   "name": "Pre-Theatre Menu",
-  "pricePerPerson": 19.95,
   "currency": "GBP",
+  "prices": [
+    { "context": "per-person", "amount": 19.95 }
+  ],
+  "available": true,
+  "seasonal": false,
+  "soldOut": false,
   "preStarter": "Poppadoms & Chutney",
   "starters": {
     "instruction": "Please choose one.",
     "items": [
       {
         "id": "pt-veg-pakora",
+        "slug": "pt-veg-pakora",
         "name": "Vegetable Pakora",
         "description": "Julienne of vegetables in a crisp batter coating with ground spices.",
-        "dietary": ["vegetarian"]
+        "dietary": ["vegetarian"],
+        "allergens": []
       },
       {
         "id": "pt-fish-pakora",
+        "slug": "pt-fish-pakora",
         "name": "Fish Pakora",
         "description": "Marinated white fish in a crisp gram flour batter.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-chicken-pakora",
+        "slug": "pt-chicken-pakora",
         "name": "Chicken Pakora",
         "description": "Marinated chicken in a crisp gram flour batter.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-chilli-squid",
+        "slug": "pt-chilli-squid",
         "name": "Chilli Squid",
         "description": "Marinated with crushed chilli and fresh ground spices.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-seekh-kebab",
+        "slug": "pt-seekh-kebab",
         "name": "Seekh Kebab",
         "description": "Spiced minced lamb, cooked in the tandoor.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-onion-bhaji",
+        "slug": "pt-onion-bhaji",
         "name": "Onion Bhaji",
         "description": "Traditional recipe of green chilli, gram flour and garam masala.",
-        "dietary": ["vegetarian"]
+        "dietary": ["vegetarian"],
+        "allergens": []
       },
       {
         "id": "pt-aloo-chana-chaat",
+        "slug": "pt-aloo-chana-chaat",
         "name": "Aloo Chana Chaat",
         "description": "Spiced potato and chickpea with mint, tamarind and sweet chilli dressing. Served cold.",
-        "dietary": ["vegetarian"]
+        "dietary": ["vegetarian"],
+        "allergens": []
       }
     ]
   },
@@ -56,51 +76,67 @@
     "items": [
       {
         "id": "pt-chicken-karahi",
+        "slug": "pt-chicken-karahi",
         "name": "Chicken Karahi",
         "description": "Cooked with onion, pepper and tomatoes.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-chicken-korma",
+        "slug": "pt-chicken-korma",
         "name": "Chicken Korma",
         "description": "Chicken breast with tomato, onion, almond and coconut with a touch of cream.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-chicken-tikka-masala",
+        "slug": "pt-chicken-tikka-masala",
         "name": "Chicken Tikka Masala",
         "description": "Charcoal-grilled chicken tikka cooked with tomato, onions, cashew nuts and cream.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-lamb-jalfrezi",
+        "slug": "pt-lamb-jalfrezi",
         "name": "Lamb Jalfrezi",
         "description": "Julienne of ginger, tomato and bell peppers in a tangy sauce.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-old-school-lamb-curry",
+        "slug": "pt-old-school-lamb-curry",
         "name": "Old School Lamb Curry",
         "description": "Slow cooked lamb with onion, tomato, ginger, garlic and made with lots of love.",
-        "dietary": []
+        "dietary": [],
+        "allergens": []
       },
       {
         "id": "pt-vegetable-korma",
+        "slug": "pt-vegetable-korma",
         "name": "Vegetable Korma",
         "description": "Coconut and cream based gravy.",
-        "dietary": ["vegetarian"]
+        "dietary": ["vegetarian"],
+        "allergens": []
       },
       {
         "id": "pt-tadka-dal",
+        "slug": "pt-tadka-dal",
         "name": "Tadka Dal",
         "description": "Spiced yellow lentils tempered with onion, garlic and fresh coriander.",
-        "dietary": ["vegetarian"]
+        "dietary": ["vegetarian"],
+        "allergens": []
       },
       {
         "id": "pt-veg-tak-a-tak",
+        "slug": "pt-veg-tak-a-tak",
         "name": "Vegetable Tak-a-Tak",
         "description": "Seasonal vegetables marinated and cooked on the griddle with onion, tomato and chaat masala.",
-        "dietary": ["vegetarian"]
+        "dietary": ["vegetarian"],
+        "allergens": []
       }
     ]
   },

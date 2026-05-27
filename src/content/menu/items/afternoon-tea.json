@@ -1,0 +1,39 @@
+{
+  "id": "afternoon-tea",
+  "slug": "afternoon-tea",
+  "name": "Afternoon Tea",
+  "currency": "GBP",
+  "prices": [
+    { "context": "for-two", "amount": 39.99 }
+  ],
+  "available": true,
+  "seasonal": false,
+  "soldOut": false,
+  "byob": true,
+  "note": "Vegetarian options available — please speak to a member of staff.",
+  "sandwiches": [
+    "Chicken Tikka Wrap",
+    "Cream Cheese and Cucumber Sandwich",
+    "Toasted Bombay Spiced Potato Sandwich"
+  ],
+  "savoury": [
+    "Lamb Sliders",
+    "Chicken Spring Rolls",
+    "Onion Bhaji",
+    "Aloo Chaat Tarts"
+  ],
+  "sweets": [
+    "Scones",
+    "Halwa Samosa",
+    "Burfi",
+    "Gulab Jamun Tart",
+    "Mango Kheer"
+  ],
+  "accompaniments": [
+    "Chilli Sauce",
+    "Cool Mint Yoghurt Sauce",
+    "Clotted Cream",
+    "Jam"
+  ],
+  "drinks": "Bottomless traditional Indian tea, or English breakfast tea/coffee."
+}

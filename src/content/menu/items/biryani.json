@@ -1,0 +1,86 @@
+[
+  {
+    "id": "biryani-vegetable",
+    "slug": "biryani-vegetable",
+    "name": "Vegetable Biryani",
+    "description": "Aromatic basmati rice served with a sauce and raita. Hyderabadi style.",
+    "categories": ["biryani"],
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "biryani-chicken",
+    "slug": "biryani-chicken",
+    "name": "Chicken Biryani",
+    "description": "Aromatic basmati rice served with a sauce and raita. Hyderabadi style.",
+    "categories": ["biryani"],
+    "prices": [
+      { "context": "standard", "amount": 15.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "biryani-lamb",
+    "slug": "biryani-lamb",
+    "name": "Lamb Biryani",
+    "description": "Aromatic basmati rice served with a sauce and raita. Hyderabadi style.",
+    "categories": ["biryani"],
+    "prices": [
+      { "context": "standard", "amount": 16.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "biryani-prawn",
+    "slug": "biryani-prawn",
+    "name": "Prawn Biryani",
+    "description": "Aromatic basmati rice served with a sauce and raita. Hyderabadi style.",
+    "categories": ["biryani"],
+    "prices": [
+      { "context": "standard", "amount": 17.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

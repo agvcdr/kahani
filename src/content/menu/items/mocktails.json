@@ -1,0 +1,212 @@
+[
+  {
+    "id": "peach-cooler",
+    "slug": "peach-cooler",
+    "name": "Peach Cooler",
+    "description": "Muddled lime wedges with mint, shaken with peach puree topped with apple juice.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "anardrana-punch",
+    "slug": "anardrana-punch",
+    "name": "Anardrana Punch",
+    "description": "Pomegranate, grenadine and lychee juice muddled with mint leaf served over ice.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mojito-lime",
+    "slug": "mojito-lime",
+    "name": "Mojito (Lime)",
+    "description": "Lime wedges muddled with mint and flavoured with lime.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.75 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mojito-mango",
+    "slug": "mojito-mango",
+    "name": "Mojito (Mango)",
+    "description": "Lime wedges muddled with mint and flavoured with mango.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.75 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mojito-pineapple",
+    "slug": "mojito-pineapple",
+    "name": "Mojito (Pineapple)",
+    "description": "Lime wedges muddled with mint and flavoured with pineapple.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.75 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "indian-sunrise",
+    "slug": "indian-sunrise",
+    "name": "Indian Sunrise",
+    "description": "Strawberry, lychee and fresh lime, shaken with mint and a hint of green chilli.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "blue-hawaiian",
+    "slug": "blue-hawaiian",
+    "name": "Blue Hawaiian",
+    "description": "Blended pineapple juice and coconut milk with blue curacao.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.75 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mango-lassi",
+    "slug": "mango-lassi",
+    "name": "Mango Lassi",
+    "description": "Natural yoghurt and puréed mango.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "spiced-mango-lassi",
+    "slug": "spiced-mango-lassi",
+    "name": "Spiced Mango Lassi",
+    "description": "Natural yoghurt, puréed mango and ginger.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "scanjbi",
+    "slug": "scanjbi",
+    "name": "Scanjbi",
+    "description": "Indian style lemonade with a hint of mint.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 5.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 10,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

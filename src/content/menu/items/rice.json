@@ -1,0 +1,65 @@
+[
+  {
+    "id": "basmati-rice",
+    "slug": "basmati-rice",
+    "name": "Basmati Rice",
+    "description": null,
+    "categories": ["rice"],
+    "prices": [
+      { "context": "standard", "amount": 3.25 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "pilau-rice",
+    "slug": "pilau-rice",
+    "name": "Pilau Rice",
+    "description": null,
+    "categories": ["rice"],
+    "prices": [
+      { "context": "standard", "amount": 3.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mushroom-rice",
+    "slug": "mushroom-rice",
+    "name": "Mushroom Rice",
+    "description": null,
+    "categories": ["rice"],
+    "prices": [
+      { "context": "standard", "amount": 3.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

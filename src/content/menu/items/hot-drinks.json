@@ -1,0 +1,190 @@
+[
+  {
+    "id": "tea",
+    "slug": "tea",
+    "name": "Tea",
+    "description": "Assorted flavours.",
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 2.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "desi-chai",
+    "slug": "desi-chai",
+    "name": "Desi Chai",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [],
+    "priceOnRequest": true,
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "single-espresso",
+    "slug": "single-espresso",
+    "name": "Single Espresso",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 2.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "double-espresso",
+    "slug": "double-espresso",
+    "name": "Double Espresso",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 2.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "cappuccino",
+    "slug": "cappuccino",
+    "name": "Cappuccino",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 3.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "black-coffee",
+    "slug": "black-coffee",
+    "name": "Black Coffee",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 2.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "white-coffee",
+    "slug": "white-coffee",
+    "name": "White Coffee",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 3.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "hot-chocolate",
+    "slug": "hot-chocolate",
+    "name": "Hot Chocolate",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 3.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "latte",
+    "slug": "latte",
+    "name": "Latte",
+    "description": null,
+    "categories": ["drinks"],
+    "prices": [
+      { "context": "standard", "amount": 3.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

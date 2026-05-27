@@ -15,12 +15,6 @@
     "priceDelta": 0.70
   },
   {
-    "id": "add-aloo",
-    "label": "Add Aloo (Potato)",
-    "priceDelta": 0.00,
-    "note": "Included in Mattar/Saag base price"
-  },
-  {
     "id": "add-paneer",
     "label": "Add Paneer (Homemade Cheese)",
     "priceDelta": 0.00,

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "kids-any-curry-chips",
+    "slug": "kids-any-curry-chips",
+    "name": "Any Curry with Chips",
+    "description": null,
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kids-chicken-nuggets",
+    "slug": "kids-chicken-nuggets",
+    "name": "Chicken Nuggets with Chips",
+    "description": null,
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kids-chicken-pakora",
+    "slug": "kids-chicken-pakora",
+    "name": "Chicken Pakora with Chips",
+    "description": null,
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kids-grilled-chicken",
+    "slug": "kids-grilled-chicken",
+    "name": "Grilled Chicken with Chips/Rice",
+    "description": null,
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kids-fish-pakora",
+    "slug": "kids-fish-pakora",
+    "name": "Fish Pakora with Chips",
+    "description": null,
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kids-chicken-tikka",
+    "slug": "kids-chicken-tikka",
+    "name": "Chicken Tikka with Chips/Rice",
+    "description": null,
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kids-veg-biryani",
+    "slug": "kids-veg-biryani",
+    "name": "Vegetable Biryani",
+    "description": "Aromatic basmati rice with fresh vegetables.",
+    "categories": ["kids"],
+    "prices": [
+      { "context": "standard", "amount": 9.50 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

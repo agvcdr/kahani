@@ -5,12 +5,21 @@
     "name": "Achari Aloo",
     "description": "Potatoes cooked with onions, tomatoes & pickling spices.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
-    "dietary": ["vegetarian"],
-    "available": true
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "paneer-karahi",
@@ -18,12 +27,21 @@
     "name": "Paneer Karahi",
     "description": "Fresh homemade cheese cooked with bell pepper, onion and tomato.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chana-masala",
@@ -31,12 +49,21 @@
     "name": "Chana Masala",
     "description": "Chickpeas, tomatoes and onions with a tempering of cumin.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
-    "dietary": ["vegetarian", "vegan"],
-    "available": true
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "dal-makhani",
@@ -44,12 +71,21 @@
     "name": "Dal Makhani",
     "description": "Whole black lentils cooked overnight on a very slow heat, finished with churned butter and fresh cream.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
-    "dietary": ["vegetarian"],
-    "available": true
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "dal-tarka",
@@ -57,12 +93,21 @@
     "name": "Dal Tarka",
     "description": "Spiced yellow lentil tempered with onions, garlic and fresh coriander.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
-    "dietary": ["vegetarian", "vegan"],
-    "available": true
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "gobhi-aloo",
@@ -70,12 +115,21 @@
     "name": "Gobhi Aloo",
     "description": "Cauliflower and potato cooked with a tomato based sauce.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
-    "dietary": ["vegetarian", "vegan"],
-    "available": true
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "brinjal-masala",
@@ -83,12 +137,21 @@
     "name": "Brinjal Masala",
     "description": "Aubergine in an onion and tomato based sauce.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
-    "dietary": ["vegetarian", "vegan"],
-    "available": true
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "mushroom-bhaji",
@@ -96,12 +159,21 @@
     "name": "Mushroom Bhaji",
     "description": "Spiced mushroom curry with onion, tomato, ginger and garlic.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
-    "dietary": ["vegetarian", "vegan"],
-    "available": true
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "mixed-vegetable-takatak",
@@ -109,12 +181,21 @@
     "name": "Mixed Vegetable Takatak",
     "description": "Seasonal vegetables marinated and cooked on the griddle with onion, tomato and chaat masala.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian", "vegan"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "paneer-butter-masala",
@@ -122,12 +203,21 @@
     "name": "Paneer Butter Masala",
     "description": "Homemade cheese cubed with cashew nuts, cooked in a warming tomato masala sauce.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 10,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "mattar-green-peas",
@@ -135,13 +225,22 @@
     "name": "Mattar (Green Peas)",
     "description": "A curry with green pea and your choice of aloo (potato), paneer (homemade cheese) or mushroom. Finished with cashew nuts and onion tomato sauce.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "modifiers": ["add-aloo", "add-paneer", "add-mushroom"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 11,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false,
+    "modifiers": ["add-paneer", "add-mushroom"]
   },
   {
     "id": "saag-spinach",
@@ -149,13 +248,22 @@
     "name": "Saag (Spinach)",
     "description": "A spinach, garlic and tempered cumin sauce with your choice of aloo (potato), paneer (homemade cheese) or mushroom.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": ["vegetarian"],
-    "modifiers": ["add-aloo", "add-paneer", "add-mushroom"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 12,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false,
+    "modifiers": ["add-paneer", "add-mushroom"]
   },
   {
     "id": "paneer-makhani",
@@ -163,11 +271,20 @@
     "name": "Paneer Makhani",
     "description": "Homemade Indian cheese cooked in a tomato based gravy with cream, cashew nuts, and honey.",
     "categories": ["vegetable-dishes"],
-    "priceMain": 12.50,
-    "priceSide": 6.95,
+    "prices": [
+      { "context": "main", "amount": 12.50 },
+      { "context": "side", "amount": 6.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": ["vegetarian"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 13,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   }
 ]

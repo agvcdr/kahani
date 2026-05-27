@@ -1,0 +1,57 @@
+{
+  "id": "party-menu",
+  "slug": "party-menu",
+  "name": "Party Menu",
+  "currency": "GBP",
+  "prices": [
+    { "context": "per-person", "amount": 24.95 }
+  ],
+  "available": true,
+  "seasonal": false,
+  "soldOut": false,
+  "style": "Banquet — main dishes presented together and shared.",
+  "courses": {
+    "preStarter": "Poppadoms & Pickle Tray",
+    "starters": [
+      "Vegetable Pakora",
+      "Fish Pakora",
+      "Chicken Tikka",
+      "Seekh Kebab"
+    ],
+    "mains": [
+      {
+        "id": "party-chicken-tikka-masala",
+        "slug": "party-chicken-tikka-masala",
+        "name": "Chicken Tikka Masala",
+        "description": "Charcoal grilled chicken tikka cooked with tomato, onions, cashew nuts and fresh cream.",
+        "dietary": [],
+        "allergens": []
+      },
+      {
+        "id": "party-chicken-korma",
+        "slug": "party-chicken-korma",
+        "name": "Chicken Korma",
+        "description": "Mildly spiced breast of chicken with tomato, onion, almond and coconut with fresh cream to finish.",
+        "dietary": [],
+        "allergens": []
+      },
+      {
+        "id": "party-lamb-karahi",
+        "slug": "party-lamb-karahi",
+        "name": "Lamb Karahi",
+        "description": "Delicately cooked in caramelised onions, tomatoes, fresh green chilli, bell pepper, garlic and ginger.",
+        "dietary": [],
+        "allergens": []
+      },
+      {
+        "id": "party-tadka-dal",
+        "slug": "party-tadka-dal",
+        "name": "Tadka Dal",
+        "description": "Spiced yellow lentils tempered with onion, garlic and fresh coriander.",
+        "dietary": ["vegetarian"],
+        "allergens": []
+      }
+    ],
+    "sides": "Served with rice and a selection of naan breads."
+  }
+}

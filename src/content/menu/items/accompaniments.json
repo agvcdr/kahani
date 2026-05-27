@@ -1,0 +1,233 @@
+[
+  {
+    "id": "poppadom",
+    "slug": "poppadom",
+    "name": "Poppadom",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 0.99 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "pickle-tray",
+    "slug": "pickle-tray",
+    "name": "Pickle Tray",
+    "description": "An assortment of pickles and chutneys, perfect for poppadoms.",
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 4.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "onion-chutney",
+    "slug": "onion-chutney",
+    "name": "Onion Chutney",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "pickle-achar",
+    "slug": "pickle-achar",
+    "name": "Pickle (Achar)",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "kahani-onion",
+    "slug": "kahani-onion",
+    "name": "Kahani Onion",
+    "description": "Onions in chilli vinegar.",
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 1,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "cucumber-raita",
+    "slug": "cucumber-raita",
+    "name": "Cucumber Raita",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "apple-mint-raita",
+    "slug": "apple-mint-raita",
+    "name": "Apple & Mint Raita",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mango-chutney",
+    "slug": "mango-chutney",
+    "name": "Mango Chutney",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "green-salad",
+    "slug": "green-salad",
+    "name": "Green Salad",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 2.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "onion-salad",
+    "slug": "onion-salad",
+    "name": "Onion Salad",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 1.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan", "gluten-free"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 10,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "chips",
+    "slug": "chips",
+    "name": "Chips",
+    "description": null,
+    "categories": ["accompaniments"],
+    "prices": [
+      { "context": "standard", "amount": 2.95 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 11,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

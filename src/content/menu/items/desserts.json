@@ -1,0 +1,191 @@
+[
+  {
+    "id": "hot-chocolate-brownie",
+    "slug": "hot-chocolate-brownie",
+    "name": "Hot Chocolate Fudge Brownie",
+    "description": "Served with vanilla ice cream & chocolate sauce.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 6.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mango-kheer",
+    "slug": "mango-kheer",
+    "name": "Mango Kheer",
+    "description": "Indian rice pudding flavoured with fresh mango and cardamom.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 6.00 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "gulab-jamun",
+    "slug": "gulab-jamun",
+    "name": "Gulab Jamun",
+    "description": "Cardamom infused cake served with ice cream.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 6.00 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "ice-cream-sundae",
+    "slug": "ice-cream-sundae",
+    "name": "Ice Cream Sundae Bonanza",
+    "description": "Our selection of ice cream with marshmallows, meringue and a mango and raspberry coulis.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 7.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "mango-kulfi",
+    "slug": "mango-kulfi",
+    "name": "Mango Kulfi",
+    "description": "Traditional Indian ice cream.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 6.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "pistachio-kulfi",
+    "slug": "pistachio-kulfi",
+    "name": "Pistachio Kulfi",
+    "description": "Traditional Indian ice cream.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 6.45 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "ice-cream-selection",
+    "slug": "ice-cream-selection",
+    "name": "Selection of Ice Cream",
+    "description": "Chocolate, Strawberry or Vanilla.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 5.00 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "sorbet-selection",
+    "slug": "sorbet-selection",
+    "name": "Selection of Sorbet",
+    "description": "Orange, lime or mango.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 5.00 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian", "vegan"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  },
+  {
+    "id": "cheesecake",
+    "slug": "cheesecake",
+    "name": "Cheesecake",
+    "description": "Cream cheese, wheat flour, honey & raspberry sauce.",
+    "categories": ["desserts"],
+    "prices": [
+      { "context": "standard", "amount": 6.00 }
+    ],
+    "currency": "GBP",
+    "spiceLevel": 0,
+    "dietary": ["vegetarian"],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
+  }
+]

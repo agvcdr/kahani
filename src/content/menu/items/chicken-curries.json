@@ -5,11 +5,20 @@
     "name": "Chicken Korma",
     "description": "Mildly spiced chicken cooked with tomato, onion, cashew nuts, almond and coconut with fresh cream to finish.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 0,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 1,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "butter-chicken",
@@ -17,11 +26,20 @@
     "name": "Butter Chicken",
     "description": "Chicken tikka cooked in a tomato based gravy enriched with fresh cream, cashew nuts and honey.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 1,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 2,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chicken-jalfrezi",
@@ -29,11 +47,20 @@
     "name": "Chicken Jalfrezi",
     "description": "Chicken tossed with julienne of ginger, tomato and bell peppers in a tangy sauce tempered with carom seeds.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 3,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chicken-karahi",
@@ -41,11 +68,20 @@
     "name": "Chicken Karahi",
     "description": "Chicken breast cooked in caramelised onions, tomatoes, bell pepper, fresh green chilli, garlic and ginger.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 4,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chicken-tikka-masala",
@@ -53,12 +89,20 @@
     "name": "Chicken Tikka Masala",
     "description": "Charcoal grilled chicken breast with chopped onions, tomatoes, cashew nuts and fresh cream.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
+    "allergens": [],
+    "available": true,
+    "sortOrder": 5,
+    "imageRef": null,
+    "imageAlt": null,
     "featured": true,
-    "available": true
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "chicken-saag",
@@ -66,11 +110,20 @@
     "name": "Chicken Saag",
     "description": "Spinach based chicken curry cooked with aromatic spices.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 6,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "homestyle-chicken-curry",
@@ -78,12 +131,21 @@
     "name": "Homestyle Chicken Curry",
     "description": "Chicken (off the bone) made with plum tomatoes, onions and roast cumin. Make it your own by adding potato, mushrooms or green peas (+70p per addition).",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "modifiers": ["add-potato", "add-mushroom", "add-green-peas"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 7,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false,
+    "modifiers": ["add-potato", "add-mushroom", "add-green-peas"]
   },
   {
     "id": "dhaba-murg-chicken-curry",
@@ -91,12 +153,21 @@
     "name": "Dhaba Murg Chicken Curry",
     "description": "Traditional slow cooked chicken on the bone curry. Make it your own by adding potato, mushrooms or green peas (+70p per addition).",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "modifiers": ["add-potato", "add-mushroom", "add-green-peas"],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 8,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false,
+    "modifiers": ["add-potato", "add-mushroom", "add-green-peas"]
   },
   {
     "id": "south-indian-garlic-chilli-chicken",
@@ -104,11 +175,20 @@
     "name": "South Indian Garlic Chilli Chicken",
     "description": "Chicken marinated with garlic, chilli, curry leaf and coconut.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 3,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 9,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   },
   {
     "id": "murg-achari",
@@ -116,10 +196,19 @@
     "name": "Murg Achari",
     "description": "Chicken cooked with onion, tomatoes & pickling spices.",
     "categories": ["chicken-curries"],
-    "price": 13.95,
+    "prices": [
+      { "context": "standard", "amount": 13.95 }
+    ],
     "currency": "GBP",
     "spiceLevel": 2,
     "dietary": [],
-    "available": true
+    "allergens": [],
+    "available": true,
+    "sortOrder": 10,
+    "imageRef": null,
+    "imageAlt": null,
+    "featured": false,
+    "seasonal": false,
+    "soldOut": false
   }
 ]
