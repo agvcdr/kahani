@@ -9,7 +9,7 @@ session.md
 AGENT_SKILL_MAP.md
 Questions.txt
 
-# Node / build output (for when the framework is added)
+# Node / build output
 node_modules/
 dist/
 .output/
@@ -17,6 +17,17 @@ dist/
 .astro/
 .next/
 .svelte-kit/
+web/.next/
+web/node_modules/
+studio/node_modules/
+studio/dist/
+studio/.sanity/
+scripts/node_modules/
+
+# Sanity env
+studio/.env
+web/.env
+web/.env.local
 
 # Environment
 .env
