@@ -84,9 +84,8 @@ ul[role="list"] { list-style: none; }
   max-width: var(--container); margin: 0 auto; padding: 0 1rem;
   height: var(--nav-height); display: flex; align-items: center; justify-content: space-between;
 }
-.site-nav__logo { text-decoration: none; display: flex; flex-direction: column; line-height: 1.1; }
-.site-nav__wordmark { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-gold); letter-spacing: .08em; }
-.site-nav__tagline  { font-size: .6rem; color: var(--color-warm-gold); letter-spacing: .18em; text-transform: uppercase; }
+.site-nav__logo { text-decoration: none; display: flex; align-items: center; }
+.site-nav__logo-img { height: 44px; width: auto; display: block; }
 
 .site-nav__burger {
   display: flex; flex-direction: column; gap: 5px; background: none;
@@ -149,6 +148,8 @@ ul[role="list"] { list-style: none; }
   font-weight: 700; color: var(--color-gold); letter-spacing: .08em; line-height: 1;
   margin-bottom: 1rem;
 }
+.hero__logo-wrap { margin: 0 0 1.5rem; }
+.hero__logo { max-width: 420px; width: 100%; height: auto; display: block; margin: 0 auto; }
 .hero__award { font-size: .9rem; color: var(--color-warm-gold); margin-bottom: 2rem; }
 .hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 

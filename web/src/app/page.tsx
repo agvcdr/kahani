@@ -17,8 +17,10 @@ export default async function HomePage() {
     <>
       <section className="hero" aria-labelledby="hero-heading">
         <div className="hero__inner">
-          <p className="hero__eyebrow">{settings?.tagline ?? 'Indian Street Food'}</p>
-          <h1 id="hero-heading" className="hero__title">{settings?.shortName ?? 'Kahani'}</h1>
+          <h1 id="hero-heading" className="hero__logo-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/kahani-logo-primary-nobg.svg" alt="Kahani Indian Street Food" className="hero__logo" />
+          </h1>
           {settings?.awards?.[0] && (
             <p className="hero__award">🏆 {settings.awards[0].title} — {settings.awards[0].body}</p>
           )}

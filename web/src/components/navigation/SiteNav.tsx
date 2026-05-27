@@ -20,8 +20,8 @@ export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
     <header className="site-nav">
       <div className="site-nav__inner">
         <Link href="/" className="site-nav__logo" aria-label="Kahani — home">
-          <span className="site-nav__wordmark">KAHANI</span>
-          <span className="site-nav__tagline">Indian Street Food</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/kahani-logo-horizontal.svg" alt="Kahani Indian Street Food" className="site-nav__logo-img" height={44} width={264} />
         </Link>
 
         <button
