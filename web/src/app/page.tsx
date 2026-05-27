@@ -25,7 +25,7 @@ export default async function HomePage() {
           <div className="hero__actions">
             <Link href="/menu" className="btn btn--primary">View Menu</Link>
             {settings?.bookTableUrl && (
-              <a href={settings.bookTableUrl} className="btn btn--outline" target="_blank" rel="noopener noreferrer">Book a Table</a>
+              <a href={settings.bookTableUrl} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">Book a Table</a>
             )}
             {settings?.onlineOrderingUrl && (
               <a href={settings.onlineOrderingUrl} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">Order Online</a>

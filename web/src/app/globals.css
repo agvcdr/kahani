@@ -71,8 +71,6 @@ ul[role="list"] { list-style: none; }
 .btn--primary:hover  { background: var(--color-warm-gold); }
 .btn--outline  { background: transparent; border-color: var(--color-gold); color: var(--color-maroon); }
 .btn--outline:hover  { background: var(--color-gold); }
-.hero .btn--outline { color: var(--color-cream); }
-.hero .btn--outline:hover { color: var(--color-maroon); }
 .btn--ghost    { background: transparent; border-color: rgba(255,255,255,.5); color: var(--color-cream); }
 .btn--ghost:hover    { background: rgba(255,255,255,.1); }
 
