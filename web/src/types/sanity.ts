@@ -7,6 +7,7 @@ export type AllergenId =
 
 export type PriceContext =
   | 'standard' | 'starter' | 'grill-main' | 'main' | 'side' | 'per-person' | 'for-two'
+  | 'bottle' | '125ml' | '175ml' | '250ml' | '500ml' | 'half-pint' | 'pint' | '30ml'
 
 export interface PriceEntry {
   context: PriceContext

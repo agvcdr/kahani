@@ -7,6 +7,14 @@ const LABELS: Partial<Record<PriceContext, string>> = {
   side: 'Side',
   'per-person': 'per person',
   'for-two': 'for two',
+  bottle: 'Bottle',
+  '125ml': '125ml',
+  '175ml': '175ml',
+  '250ml': '250ml',
+  '500ml': '500ml',
+  'half-pint': '½ pt',
+  pint: 'Pint',
+  '30ml': '30ml',
 }
 
 interface PriceBadgeProps {

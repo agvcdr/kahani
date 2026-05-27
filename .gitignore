@@ -22,6 +22,7 @@ web/node_modules/
 studio/node_modules/
 studio/dist/
 studio/.sanity/
+scripts/_wine-raw.json
 scripts/node_modules/
 
 # Sanity env

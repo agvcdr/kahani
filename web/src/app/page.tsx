@@ -16,6 +16,18 @@ export default async function HomePage() {
   return (
     <>
       <section className="hero" aria-labelledby="hero-heading">
+        <video
+          className="hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="hero__overlay" aria-hidden="true" />
         <div className="hero__inner">
           <h1 id="hero-heading" className="hero__logo-wrap">
             {/* eslint-disable-next-line @next/next/no-img-element */}

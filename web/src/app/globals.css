@@ -148,12 +148,28 @@ ul[role="list"] { list-style: none; }
   padding: 4rem 1.25rem;
   position: relative; overflow: hidden;
 }
+.hero__video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0; pointer-events: none;
+}
+.hero__overlay {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(30,8,8,.35) 0%, rgba(30,8,8,.75) 80%),
+    linear-gradient(180deg, rgba(30,8,8,.4) 0%, rgba(30,8,8,.65) 60%, rgba(30,8,8,.85) 100%);
+}
 .hero::before {
-  content: ''; position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0; z-index: 2;
   background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A028' fill-opacity='0.03'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
 }
-.hero__inner { position: relative; z-index: 1; max-width: 700px; width: 100%; }
+.hero__inner { position: relative; z-index: 3; max-width: 700px; width: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__video { display: none; }
+}
 .hero__eyebrow {
   font-size: .75rem; letter-spacing: .25em; text-transform: uppercase;
   color: var(--color-warm-gold); margin-bottom: 1.25rem;
