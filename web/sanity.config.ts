@@ -1,6 +1,5 @@
 import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
-import { visionTool } from '@sanity/vision'
 import * as schemas from '../studio/src/schemas'
 import { deskStructure } from '../studio/src/structure/deskStructure'
 
@@ -11,7 +10,6 @@ export default defineConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
   plugins: [
     structureTool({ structure: deskStructure }),
-    visionTool(),
   ],
   schema: { types: Object.values(schemas) },
   basePath: '/studio',
