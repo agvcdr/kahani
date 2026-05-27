@@ -16,6 +16,7 @@
     "next-sanity": "^9.8.21",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-is": "^19.2.6",
     "sanity": "^3.88.1"
   },
   "devDependencies": {
