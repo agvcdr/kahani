@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Compact lockup — wordmark + mid ornament + tagline, no top ornament. Use where vertical space is tight. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 112" width="400" height="112" role="img" aria-label="Kahani Indian Street Food logo">
+  <title>Kahani Indian Street Food — Compact Logo</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Montserrat:wght@600&amp;display=swap');
+      .wordmark { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+      .tagline  { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="112" fill="#1E0808"/>
+
+  <!-- Wordmark -->
+  <text class="wordmark" x="206" y="68"
+    font-size="54" font-weight="700" fill="#C9A028"
+    text-anchor="middle" letter-spacing="12">KAHANI</text>
+
+  <!-- Mid ornament -->
+  <line x1="40"  y1="82" x2="166" y2="82" stroke="#C9A028" stroke-width="0.8" opacity="0.4"/>
+  <polygon points="200,76 205,82 200,88 195,82" fill="#C9A028" opacity="0.8"/>
+  <line x1="234" y1="82" x2="360" y2="82" stroke="#C9A028" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text class="tagline" x="200" y="102"
+    font-size="9" font-weight="600" fill="#D4AA50"
+    text-anchor="middle" letter-spacing="5">INDIAN STREET FOOD</text>
+</svg>

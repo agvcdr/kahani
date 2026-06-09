@@ -9,6 +9,7 @@
     "dev": "concurrently --names web,studio --prefix-colors cyan,yellow \"npm run dev --workspace=web\" \"npm run dev --workspace=studio\"",
     "build": "npm run build --workspace=web",
     "studio": "npm run dev --workspace=studio",
+    "menu": "node scripts/generate-menu.mjs",
     "migrate": "node scripts/migrate-to-sanity.mjs",
     "validate": "node scripts/validate-content.mjs"
   },

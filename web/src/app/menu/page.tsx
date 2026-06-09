@@ -41,6 +41,12 @@ export default async function MenuPage() {
       </div>
 
       <div className="container menu-index__body">
+        <div style={{ textAlign: 'right', marginBottom: '1.5rem' }}>
+          <Link href="/menu/print" style={{ fontSize: '13px', color: 'var(--color-text-muted)', textDecoration: 'none', borderBottom: '1px solid var(--color-border)', paddingBottom: '1px' }}>
+            Print full menu
+          </Link>
+        </div>
+
         {Object.entries(grouped).map(([group, cats]) => (
           <section key={group} className="menu-group" aria-labelledby={`group-${group}`}>
             <h2 id={`group-${group}`} className="menu-group__heading">{GROUP_LABELS[group] ?? group}</h2>

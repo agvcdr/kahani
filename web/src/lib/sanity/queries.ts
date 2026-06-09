@@ -48,6 +48,29 @@ export const SITE_SETTINGS = `
   }
 `
 
+export const PRINT_MENU_DATA = `{
+  "items": *[_type == "menuItem" && available == true] | order(sortOrder asc) {
+    id, "slug": slug.current, name, description,
+    prices, priceOnRequest,
+    dietary, allergens, spiceLevel,
+    featured, soldOut,
+    "categoryIds": categories[]->id
+  },
+  "setMenus": *[_type == "setMenu" && available == true] {
+    id, "slug": slug.current, name,
+    prices, byob, preStarter, availability, note,
+    courses[] {
+      courseTitle, instruction,
+      items[] { "id": id.current, name, description, dietary, allergens },
+      fixedItems
+    }
+  },
+  "settings": *[_type == "siteSettings" && _id == "siteSettings"][0] {
+    name, phone,
+    "address": address { line1, city, postcode }
+  }
+}`
+
 export const FEATURED_MENU_ITEMS = `
   *[_type == "menuItem" && featured == true && available == true][0...6] {
     id, "slug": slug.current, name, description,

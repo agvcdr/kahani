@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Horizontal lockup — diamond icon + KAHANI + stacked tagline. Use for website nav headers, email headers, app topbars. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 90" width="540" height="90" role="img" aria-label="Kahani Indian Street Food logo">
+  <title>Kahani Indian Street Food — Horizontal Lockup</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Montserrat:wght@400;600&amp;display=swap');
+      .wordmark { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+      .tagline  { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="540" height="90" fill="#1E0808"/>
+
+  <!-- Diamond icon mark -->
+  <polygon points="30,45 42,57 54,45 42,33" fill="#C9A028"/>
+  <polygon points="30,45 38,53 46,45 38,37" fill="#1E0808"/>
+
+  <!-- Vertical divider -->
+  <line x1="70" y1="22" x2="70" y2="68"
+    stroke="#C9A028" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Wordmark -->
+  <text class="wordmark" x="90" y="56"
+    font-size="44" font-weight="700" fill="#C9A028"
+    letter-spacing="10">KAHANI</text>
+
+  <!-- Stacked tagline -->
+  <text class="tagline" x="392" y="36"
+    font-size="9" font-weight="600" fill="#D4AA50" letter-spacing="4">INDIAN</text>
+  <text class="tagline" x="392" y="52"
+    font-size="9" font-weight="600" fill="#D4AA50" letter-spacing="4">STREET</text>
+  <text class="tagline" x="392" y="68"
+    font-size="9" font-weight="600" fill="#D4AA50" letter-spacing="4">FOOD</text>
+</svg>

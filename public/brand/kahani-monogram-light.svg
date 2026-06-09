@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Monogram Mark — light variant. Use on white/cream backgrounds. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Kahani monogram">
+  <title>Kahani — Monogram Mark (Light)</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap');
+      .mono { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+    </style>
+  </defs>
+
+  <!-- Background — Warm Cream -->
+  <rect width="100" height="100" fill="#FFF8EF"/>
+
+  <!-- Outer diamond frame -->
+  <polygon points="50,6 94,50 50,94 6,50"
+    fill="none" stroke="#C9A028" stroke-width="1.5"/>
+  <!-- Inner diamond frame -->
+  <polygon points="50,14 86,50 50,86 14,50"
+    fill="none" stroke="#C9A028" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- K monogram — Deep Maroon -->
+  <text class="mono" x="50" y="68"
+    font-size="52" font-weight="700" fill="#1E0808"
+    text-anchor="middle">K</text>
+</svg>

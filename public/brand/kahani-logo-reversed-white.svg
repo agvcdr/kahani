@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 165" width="560" height="165" role="img" aria-label="Kahani Indian Street Food logo">
+  <title>Kahani Indian Street Food — Reversed Logo on White</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Montserrat:wght@600&amp;display=swap');
+      .wordmark { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; }
+      .tagline  { font-family: 'Montserrat', Arial, Helvetica, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="560" height="165" fill="#FFFFFF"/>
+
+  <!-- Top ornament -->
+  <line x1="60"  y1="34" x2="246" y2="34" stroke="#C9A028" stroke-width="0.9" opacity="0.55"/>
+  <polygon points="280,25 287,34 280,43 273,34" fill="#C9A028"/>
+  <line x1="314" y1="34" x2="500" y2="34" stroke="#C9A028" stroke-width="0.9" opacity="0.55"/>
+  <text x="58"  y="38" text-anchor="middle" fill="#C9A028" font-size="9" opacity="0.4" font-family="serif">✦</text>
+  <text x="502" y="38" text-anchor="middle" fill="#C9A028" font-size="9" opacity="0.4" font-family="serif">✦</text>
+
+  <!-- Wordmark — Deep Maroon on White -->
+  <text class="wordmark" x="288" y="108"
+    font-size="72" font-weight="700" fill="#1E0808"
+    text-anchor="middle" letter-spacing="16">KAHANI</text>
+
+  <!-- Mid ornament -->
+  <line x1="80"  y1="126" x2="244" y2="126" stroke="#C9A028" stroke-width="0.9" opacity="0.4"/>
+  <polygon points="280,119 286,126 280,133 274,126" fill="#C9A028" opacity="0.75"/>
+  <line x1="316" y1="126" x2="480" y2="126" stroke="#C9A028" stroke-width="0.9" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text class="tagline" x="280" y="153"
+    font-size="11.5" font-weight="600" fill="#9A7018"
+    text-anchor="middle" letter-spacing="7">INDIAN STREET FOOD</text>
+</svg>

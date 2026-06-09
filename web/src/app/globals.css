@@ -494,3 +494,11 @@ ul[role="list"] { list-style: none; }
   color: rgba(255,248,239,.35);
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem;
 }
+
+/* ── Print ─────────────────────────────────────────────────────────── */
+@media print {
+  .site-nav, .site-footer { display: none !important; }
+  a.skip-link { display: none !important; }
+  body { background: white !important; }
+  #main-content { padding: 0 !important; margin: 0 !important; }
+}
