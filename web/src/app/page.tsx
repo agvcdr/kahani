@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { publicClient } from '@/lib/sanity/client'
 import { SITE_SETTINGS, FEATURED_MENU_ITEMS } from '@/lib/sanity/queries'
 import type { SanitySiteSettings, SanityMenuItem } from '@/types/sanity'
-import { MenuItemCard } from '@/components/menu/MenuItemCard'
+import { FeaturedCarousel } from '@/components/menu/FeaturedCarousel'
 import { HoursAndLocation } from '@/components/sections/HoursAndLocation'
 
 export const revalidate = 3600
@@ -52,11 +52,9 @@ export default async function HomePage() {
         <section className="featured-section" aria-labelledby="featured-heading">
           <div className="container">
             <h2 id="featured-heading" className="section-heading section-heading--center">Chef's Recommendations</h2>
-            <ul className="menu-grid" role="list">
-              {featured.map(item => (
-                <li key={item.id}><MenuItemCard item={item} /></li>
-              ))}
-            </ul>
+          </div>
+          <FeaturedCarousel items={featured} />
+          <div className="container">
             <div className="featured-section__cta">
               <Link href="/menu" className="btn btn--outline">Full Menu</Link>
             </div>
