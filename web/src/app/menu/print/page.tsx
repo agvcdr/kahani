@@ -229,18 +229,10 @@ function coverPage(settings: PrintData['settings']): string {
 </div>`
 }
 
-function tradStartersPage(items: PrintItem[]): string {
-  return menuPage(
-    'A La Carte &mdash; Traditional Starters',
-    secHead('Traditional Starters') + twoCols(items, ['starter', 'standard'])
-  )
-}
-
-function sigStartersPage(items: PrintItem[]): string {
-  return menuPage(
-    'A La Carte &mdash; Signature Starters',
-    secHead('Signature Starters') + twoCols(items, ['starter', 'standard'])
-  )
+function startersPage(trad: PrintItem[], sig: PrintItem[]): string {
+  return menuPage('A La Carte &mdash; Starters',
+    secHead('Traditional Starters') + twoCols(trad, ['starter', 'standard']) +
+    secHead('Signature Starters') + twoCols(sig, ['starter', 'standard']))
 }
 
 function grillSeafoodPage(
@@ -381,28 +373,11 @@ ${priceBand('Per Person', price, 'Available 12:00&ndash;18:30')}
   return menuPage('Pre-Theatre Menu', body)
 }
 
-function kidsPage(items: PrintItem[]): string {
-  const mainPrice = items.find(i => !i.id.includes('ice-cream') && !['kids-caprisun','kids-appletizer','kids-apple-juice','kids-orange-juice','kids-lassi'].includes(i.id))?.prices[0]?.amount ?? 9.50
-  const [left, right] = splitCols(items)
-  const ri = (i: PrintItem) => `<li class="set-item">${esc(i.name)}${badges(i.dietary)}</li>`
-
-  const body = `<div class="set-pg">
-<div class="set-hd">
-  <h2 class="set-title">Kids Menu</h2>
-  <p class="set-sub">For our little guests &mdash; age 12 and under</p>
-</div>
-${priceBand('Main Course', mainPrice, '')}
-<div class="set-cols">
-  <div class="set-col">
-    <ul class="set-list">${left.map(ri).join('')}</ul>
-  </div>
-  <div class="set-col">
-    <ul class="set-list">${right.map(ri).join('')}</ul>
-  </div>
-</div>
-</div>`
-
-  return menuPage('Kids Menu', body)
+function kidsPage(mains: PrintItem[], desserts: PrintItem[], drinks: PrintItem[]): string {
+  return menuPage('Kids Menu',
+    secHead('Mains') + twoCols(mains, 'standard') +
+    secHead('Desserts') + twoCols(desserts, 'standard') +
+    secHead('Drinks') + twoCols(drinks, 'standard'))
 }
 
 function partyAfternoonTeaPage(
@@ -874,16 +849,17 @@ export default async function PrintMenuPage() {
 
   const pages = [
     coverPage(data.settings),
-    tradStartersPage(gc('starters-traditional')),
-    sigStartersPage(gc('starters-signature')),
+    startersPage(gc('starters-traditional'), gc('starters-signature')),
     grillSeafoodPage(gc('tandoori-grill'), gc('seafood-curries'), starterIds),
     curriesPage(gc('chicken-curries'), gc('lamb-curries')),
     vegBiryaniPage(gc('vegetable-dishes'), gc('biryani')),
     breadsRiceAccPage(gc('breads'), gc('rice'), gc('accompaniments')),
-    dessertsDrinksPage(gc('desserts'), gc('drinks')),
+    dessertsDrinksPage(gc('desserts'), [
+      ...gc('hot-drinks'), ...gc('soft-drinks'), ...gc('lassi-indian'),
+    ]),
     lunchPage(sm('lunch-one-course'), sm('lunch-two-course')),
     preTheatrePage(sm('pre-theatre')),
-    kidsPage(gc('kids')),
+    kidsPage(gc('kids-mains'), gc('kids-desserts'), gc('kids-drinks')),
     partyAfternoonTeaPage(sm('party'), sm('afternoon-tea')),
   ].join('')
 
