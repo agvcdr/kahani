@@ -17,6 +17,20 @@ export const MENU_ITEMS_BY_CATEGORY = `
   }
 `
 
+export const MENU_ITEMS_BY_CATEGORY_IDS = `
+  *[_type == "menuItem" && available == true && count(categories[@._ref in $categoryRefs]) > 0]
+  | order(sortOrder asc) {
+    id, "slug": slug.current, name, description,
+    prices, priceOnRequest, currency,
+    dietary, allergens, spiceLevel,
+    featured, seasonal, soldOut,
+    "modifiers": modifiers[]->{id, label, priceDelta},
+    "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
+    serves, size,
+    "categoryIds": categories[]->id
+  }
+`
+
 export const ALL_SET_MENUS = `
   *[_type == "setMenu" && available == true] | order(name asc) {
     id, "slug": slug.current, name, prices, availability, byob
