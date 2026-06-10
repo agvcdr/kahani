@@ -75,12 +75,19 @@ export const DRINK_SECTIONS: MenuSection[] = [
   {
     slug: 'soft-drinks',
     label: 'Soft & Hot Drinks',
-    categoryIds: ['drink-soft', 'drinks'],
+    categoryIds: ['hot-drinks', 'soft-drinks', 'lassi-indian'],
     showSubHeadings: true,
   },
 ]
 
-export const ALL_SECTIONS: MenuSection[] = [...FOOD_SECTIONS, ...DRINK_SECTIONS]
+export const KIDS_SECTION: MenuSection = {
+  slug: 'kids',
+  label: 'Kids Menu',
+  categoryIds: ['kids-mains', 'kids-desserts', 'kids-drinks'],
+  showSubHeadings: true,
+}
+
+export const ALL_SECTIONS: MenuSection[] = [...FOOD_SECTIONS, ...DRINK_SECTIONS, KIDS_SECTION]
 export const SECTION_BY_SLUG: Record<string, MenuSection> = Object.fromEntries(
   ALL_SECTIONS.map(s => [s.slug, s])
 )
