@@ -41,3 +41,4 @@ web/.env.local
 
 # OS
 Thumbs.db
+.superpowers/
