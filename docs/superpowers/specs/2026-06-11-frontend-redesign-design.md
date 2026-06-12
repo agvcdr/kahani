@@ -21,8 +21,8 @@ content model intact. It changes presentation only.
   not decoration. Earlier "busy" grid concepts were rejected.
 - **Hierarchy over uniformity.** A few signature dishes get dramatic macro-photography
   spotlights to upsell; everything else recedes into a quiet, legible list.
-- **Story.** The brand idea is "Every plate has a story" — dishes carry a regional
-  origin (Kashmir, Punjab, Gujarat…).
+- **Story.** The brand idea is "Every plate has a story" — promoted dishes can carry a
+  regional origin (Kashmir, Punjab, Gujarat…) where it's known; it is never invented.
 - **Modern, minimal, motion-forward.** Hidden navigation, live imagery, generous space.
 
 ## Visual identity (locked)
@@ -84,7 +84,21 @@ A diamond / jali language used consistently:
 - Wired so the owner's real photos (uploaded in Sanity) override stock with **no code
   change** — image fields already exist on `menuItem`; a `heroImages` source and
   per-category images fall back to stock when Sanity has none.
+- **All stock fallback URLs live in one module** (e.g. `src/lib/images/fallbacks.ts`),
+  never scattered through components — this keeps the same content/presentation separation
+  the project requires and makes the eventual swap-to-real trivial.
 - See `[[todo-food-photography]]`.
+
+### Performance & imagery (cross-cutting)
+Image weight is the dominant Core Web Vitals risk: the hero carousel, the menu macro
+spotlights, and the gallery masonry are all image-heavy. One shared strategy, applied
+everywhere rather than per-page:
+- Every image is `next/image` with correct responsive `sizes`; serve modern formats.
+- **`priority` is used only for the single above-the-fold LCP image per page** (hero slide
+  1, or the page's first full-bleed spotlight); everything else lazy-loads.
+- Fixed aspect ratios / explicit dimensions on all media to hold layout (no CLS).
+- Carousels preload only the first slide; subsequent slides load after first paint.
+- Measure with a Lighthouse/perf check (see Local testing) before sign-off.
 
 ## Navigation — hidden dropdown (site-wide)
 
@@ -125,9 +139,9 @@ Replaces the current horizontal `SiteNav`. Applies on **every page**.
      ~380px. The frame thins and the corner brackets drop at the smallest breakpoint so
      the headline keeps its breathing room.
 3. **Chef's Selection.** Reuses the existing `FeaturedCarousel`, restyled to cream +
-   saffron (prices/tags in `--color-saffron-ink` for contrast), adds a regional-origin
-   tag per dish (same graceful empty state — no origin, no tag, no gap) and a diamond
-   divider heading. Keeps its existing `DietaryBadge`.
+   saffron (prices/tags in `--color-saffron-ink` for contrast), shows a regional-origin
+   tag **where one exists** (same graceful empty state — no origin, no tag, no gap) and a
+   diamond divider heading. Keeps its existing `DietaryBadge`.
 4. **Hours & Location.** Existing `HoursAndLocation`, restyled cream/saffron with a
    diamond divider.
 5. **Ready to Visit?** Existing contact-actions grid (Call / Book / Order / Directions),
@@ -165,16 +179,23 @@ immediately after the dish name in the list. A "sold out" item is visibly marked
 dropped for aesthetics.
 
 **`Order Online`, not `Add to Order` (fixes a defect).** The site has **no in-house
-cart** — ordering is an external link. The button must say `Order Online` and link to the
-external ordering platform (deep-linked to the category where the platform supports it),
-never imply an on-site basket.
+cart** — ordering is an external link. The data model exposes a **single global
+`settings.onlineOrderingUrl`** (already used by the homepage, contact page, and footer),
+so spotlight buttons link to that same URL in a new tab (`target="_blank"
+rel="noopener noreferrer"`), consistent with the rest of the site. Per-category or
+per-dish deep-linking is **not possible without new data** the owner would have to supply;
+it is out of scope. The button never implies an on-site basket, and it is hidden when
+`onlineOrderingUrl` is absent.
 
-**Origin tags — best-guess now, graceful empty state.** Region tags (e.g. "Punjab",
-"Kashmir") and the one-line spotlight origin stories are **populated with a sensible
-best-guess for launch** and flagged for the owner to review/correct before production
-(`[[project-kahani-restaurant]]`). The empty state is explicit: **if a dish has no
-origin, the tag and its surrounding separator simply do not render** — no gap, no
-placeholder dash, no "—". The row must look intentional with or without an origin.
+**Origin tags — optional, seeded only for promoted dishes.** `origin` is an **optional**
+field. We do **not** best-guess a region for the whole menu (100+ items) — inventing a
+wrong region ("Punjab" on a Gujarati dish) in front of customers is worse than showing
+none, and it conflicts with the project rule against assuming restaurant details. Instead,
+seed a best-guess origin **only for the handful of signature/spotlight dishes** we are
+actively promoting, flagged for owner review (`[[project-kahani-restaurant]]`). Everything
+else simply omits it. The empty state is explicit and is the common case: **if a dish has
+no origin, the tag and its surrounding separator do not render** — no gap, no placeholder
+dash, no "—". The row must look intentional with or without an origin.
 
 **Spotlight selection is data-driven:** a new `signature` boolean on the `menuItem`
 Sanity schema (plus its existing image) decides which dishes are promoted and in what
@@ -193,13 +214,17 @@ A single vertical narrative with a **resilient backbone** plus an **optional sto
 so the page looks complete today (when narrative is placeholder) and deepens as the owner
 writes real story — same layout, no rebuild.
 
-**Backbone — always renders, from data we already have:**
-1. Framed hero (same motif as homepage): eyebrow "Our Kahani · Edinburgh", headline
-   "Every plate has a story" ("story" amber, not italic).
+**Backbone — renders from data we already have (no narrative authoring needed):**
+1. Framed hero (same motif as homepage, but its **own** headline so the two pages don't
+   read identically): eyebrow "Edinburgh · Indian Street Food", headline **"Our Kahani"**
+   ("Kahani" amber, not italic).
 2. Four "The Kahani difference" pillar cards: Street-Food Roots · Family Recipes ·
    Edinburgh Home (by St James Quarter & the Playhouse) · Catering & Events.
-3. Scottish Curry Award band ("Best Restaurant in Edinburgh").
+3. Award band ("Best Restaurant in Edinburgh — Scottish Curry Awards") — renders
+   **whenever `settings.awards` has entries** (it currently does); hidden if empty.
 4. Visit CTA (Book a Table · View the Menu) + footer.
+
+The hero, pillars, and CTA always render; the award band is data-contingent as noted.
 
 **Story layer — optional, owner-authored in Sanity, renders only when present:**
 - A short **intro statement** (one or two sentences).
@@ -241,7 +266,8 @@ A browsable photo gallery mixing **Food / Interior / Events**, on the locked ide
   with no images hides its chip** (no empty filter).
 - **Display-only — no lightbox.** Tiles do not enlarge. Each tile carries a small
   category badge and an optional short caption (e.g. a dish name) that rides on the image
-  with a gradient scrim for legibility.
+  with a gradient scrim for legibility. (A tap-to-enlarge lightbox is a deliberate
+  non-goal for launch — easy to add later if user feedback wants it.)
 - **Resilience:** masonry needs a sensible minimum; with few photos it degrades toward a
   tidy uniform grid rather than looking sparse. Page still renders cleanly at a small
   photo count.
@@ -283,10 +309,11 @@ photos (`[[todo-food-photography]]`). Food tiles may reuse existing `menuItem` i
   `featured`, order) and query; stock fallback. Add `Gallery` to the nav links.
 - `SignatureSpotlight.tsx` — renders `Order Online` (external link), not an on-site
   cart action.
-- Sanity: add `signature` boolean to `studio/src/schemas/documents/menuItem.ts` (and the
-  embedded web studio schema); extend the category query to return signature items +
-  images. Origin/region fields populated with best-guess content for launch, flagged for
-  owner review.
+- Sanity: add `signature` boolean to the **single** schema source at
+  `studio/src/schemas/` (imported by `web/sanity.config.ts` as `../studio/src/schemas` and
+  mounted by the web studio at `src/app/studio` — there is **no** separate embedded schema
+  to keep in sync). Extend the category query to return signature items + images. Add an
+  optional `origin` field, seeded only for promoted dishes (see Origin tags below).
 - Imagery: a `heroImages` array and per-category/per-dish stock fallbacks that yield to
   Sanity images when present.
 
@@ -295,6 +322,18 @@ Homepage + menu (index + category) + **About page (hybrid A/B)** + **Gallery pag
 (editorial masonry)** + site-wide nav, footer, and design tokens. The Contact /
 reservations page inherits the new tokens automatically and gets a dedicated polish pass
 in a follow-up.
+
+This is a large surface for one undifferentiated build, so the **implementation plan must
+be phased into independently shippable, separately testable stages**, each of which builds
+green before the next starts. Suggested ordering:
+1. **Foundation** — design tokens, font swap (Marcellus + Karla), site-wide dropdown nav,
+   footer recolour.
+2. **Homepage** — hero carousel, restyled Chef's Selection / Hours / contact sections.
+3. **Menu** — restrained index + the 3-tier category engine (`signature` + `origin`,
+   dietary states, `Order Online`).
+4. **About** — hybrid backbone + optional story chapters (shared `EditorialSplit`).
+5. **Gallery** — new route, `galleryImage` schema, masonry + filters.
+Stages 2–5 each depend only on stage 1, so they can be reviewed and merged independently.
 
 ## Local testing
 
@@ -314,6 +353,9 @@ in a follow-up.
 - Gallery: filter chips keyboard-operable with `aria-pressed`; a category with no images
   hides its chip; masonry degrades cleanly at a low photo count; below-fold images
   lazy-load without layout shift.
+- **Performance check** (Lighthouse or equivalent) on the homepage, a menu category, and
+  the gallery: confirm a single `priority` LCP image per page, no layout shift from
+  imagery, and modern image formats served.
 
 ## Out of scope / follow-ups
 
