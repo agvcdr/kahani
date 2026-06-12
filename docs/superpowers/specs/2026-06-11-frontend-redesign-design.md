@@ -100,7 +100,7 @@ Replaces the current horizontal `SiteNav`. Applies on **every page**.
 - **On open:** a translucent dim (`rgba(16,7,0,0.55)`, **no blur**) covers the page;
   any animating hero **keeps animating** underneath, just dimmed.
 - **Links cascade from the top-right, directly under the toggle**, right-aligned, in
-  large Marcellus, staggered in: Home · Menu · About · Find Us.
+  large Marcellus, staggered in: Home · Menu · About · Gallery · Find Us.
 - Hairline saffron rule, then secondary actions (Book a Table · Order Online · Gift
   Vouchers) and a contact line (address · phone).
 - Hamburger morphs to ✕ and label to "Close"; the page brightens back on close.
@@ -187,6 +187,74 @@ imagery is temporary and overridden by the owner's real Sanity photos with no co
 (`[[todo-food-photography]]`); until then, choose stock that closely matches actual
 plating, and the owner reviews spotlight selections before production.
 
+## About page — "Our Kahani" (hybrid A/B)
+
+A single vertical narrative with a **resilient backbone** plus an **optional story layer**,
+so the page looks complete today (when narrative is placeholder) and deepens as the owner
+writes real story — same layout, no rebuild.
+
+**Backbone — always renders, from data we already have:**
+1. Framed hero (same motif as homepage): eyebrow "Our Kahani · Edinburgh", headline
+   "Every plate has a story" ("story" amber, not italic).
+2. Four "The Kahani difference" pillar cards: Street-Food Roots · Family Recipes ·
+   Edinburgh Home (by St James Quarter & the Playhouse) · Catering & Events.
+3. Scottish Curry Award band ("Best Restaurant in Edinburgh").
+4. Visit CTA (Book a Table · View the Menu) + footer.
+
+**Story layer — optional, owner-authored in Sanity, renders only when present:**
+- A short **intro statement** (one or two sentences).
+- An ordered list of **chapters**, each an editorial split (image + eyebrow "Chapter N" +
+  Marcellus title + body), alternating left/right, **reusing the menu editorial-split
+  component**. A chapter with no content **does not render** — no empty block, no gap.
+  Any number of chapters is supported.
+
+**Content model:** an `aboutStory` structure (on `siteSettings` or a dedicated
+`aboutPage` document) with `intro` (text) and `chapters[]` (each: image, title, body,
+optional eyebrow). The existing `description` / `awards` / `cuisine` fields still feed the
+backbone. Seeds below are **best-guess for layout, flagged for owner review**
+(`[[project-kahani-restaurant]]`).
+
+**Seed copy (placeholder):**
+- *Intro:* "Kahani" means story. Ours began on the busy food streets of India and found a
+  home on Edinburgh's Antigua Street.
+- *Chapter One — From the street stalls:* Kahani began with a memory: the clamour of an
+  Indian roadside at dusk — tawas hissing, charcoal smoke curling over the crowd, the
+  snap of fresh spice in the air. That is the energy we set out to capture — honest street
+  food, cooked fast and full of flavour, the kind you eat on your feet and remember for
+  years. We carried it north to a corner of Antigua Street and built our kitchen around it.
+- *Chapter Two — Recipes, handed down:* Behind every dish is a recipe that was never
+  written down — spice blends measured by eye and memory, passed from one generation's
+  hands to the next. We cook them the slow way they were meant to be cooked, then plate
+  them for a new city and a new table. Nothing here comes from a jar; everything here has
+  a story.
+- *Later (not seeded):* "A city's welcome" (award/recognition), "Beyond the table"
+  (catering, events, afternoon tea).
+
+## Gallery page — "Editorial Masonry" (mixed, filtered)
+
+A browsable photo gallery mixing **Food / Interior / Events**, on the locked identity.
+
+- **Layout:** editorial masonry — varied tile heights with a few larger "hero" tiles
+  breaking the grid (hierarchy over uniformity, consistent with the rest of the site).
+- **Filters:** chip bar (All · Food · Interior · Events) above the grid. Client-side
+  filter; chips are real buttons, keyboard operable, with `aria-pressed`. **A category
+  with no images hides its chip** (no empty filter).
+- **Display-only — no lightbox.** Tiles do not enlarge. Each tile carries a small
+  category badge and an optional short caption (e.g. a dish name) that rides on the image
+  with a gradient scrim for legibility.
+- **Resilience:** masonry needs a sensible minimum; with few photos it degrades toward a
+  tidy uniform grid rather than looking sparse. Page still renders cleanly at a small
+  photo count.
+- **Performance:** images are `next/image`, lazy-loaded below the fold; tiles use fixed
+  aspect ratios to avoid layout shift as the masonry fills.
+- **Accessibility:** every image has meaningful `alt`; filter state announced; respects
+  reduced-motion (no tile entrance animation if set).
+
+**Content model:** a `galleryImage` source in Sanity — each image with a `category`
+(`food` | `interior` | `events`), optional `caption`, optional `featured` (promotes it to
+a large hero tile), and ordering. Falls back to curated stock until the owner uploads real
+photos (`[[todo-food-photography]]`). Food tiles may reuse existing `menuItem` images.
+
 ## Component & code impact
 
 - `web/src/app/layout.tsx` — swap fonts to Marcellus + Karla; keep CSS variables.
@@ -201,10 +269,18 @@ plating, and the owner reviews spotlight selections before production.
   `--color-saffron-ink`, never `--color-saffron`.
 - `DietaryBadge` — reused in spotlights (badge cluster) and the quiet list (small inline
   glyphs); add a compact/glyph variant if the current one is too heavy for the list.
-- **New:** `HeroCarousel.tsx`; `SignatureSpotlight.tsx` (full-bleed + split variants).
+- **New:** `HeroCarousel.tsx`; `SignatureSpotlight.tsx` (full-bleed + split variants). The
+  **split variant is a shared `EditorialSplit`** — one reusable component used by both menu
+  spotlights and About chapters, not two implementations.
 - `FeaturedCarousel.tsx` — restyle + origin tag (no structural change).
 - Menu category page (`web/src/app/menu/[categorySlug]/page.tsx`) — compose spotlights
   above the quiet list using the `signature` flag.
+- `web/src/app/about/page.tsx` — rebuild as the hybrid A/B page: backbone (hero, pillars,
+  award band, CTA) + optional intro/chapters from `aboutStory`, reusing the editorial-split
+  component. Add `aboutStory` (`intro`, `chapters[]`) to the Sanity schema + query.
+- **New:** `web/src/app/gallery/page.tsx` + a `GalleryGrid.tsx` client component (masonry
+  + filter chips, display-only). Add a `galleryImage` schema (`category`, `caption`,
+  `featured`, order) and query; stock fallback. Add `Gallery` to the nav links.
 - `SignatureSpotlight.tsx` — renders `Order Online` (external link), not an on-site
   cart action.
 - Sanity: add `signature` boolean to `studio/src/schemas/documents/menuItem.ts` (and the
@@ -215,9 +291,10 @@ plating, and the owner reviews spotlight selections before production.
   Sanity images when present.
 
 ### Scope this round
-Homepage + menu (index + category) + site-wide nav, footer, and design tokens. The
-About and Contact pages inherit the new tokens automatically and get a dedicated polish
-pass in a follow-up.
+Homepage + menu (index + category) + **About page (hybrid A/B)** + **Gallery page
+(editorial masonry)** + site-wide nav, footer, and design tokens. The Contact /
+reservations page inherits the new tokens automatically and gets a dedicated polish pass
+in a follow-up.
 
 ## Local testing
 
@@ -234,11 +311,16 @@ pass in a follow-up.
   and its `Order Online` action is suppressed.
 - A dish with **no origin** renders cleanly (no empty tag, no stray separator).
 - Hero LCP: first slide is `priority`/preloaded; confirm no LCP regression.
+- Gallery: filter chips keyboard-operable with `aria-pressed`; a category with no images
+  hides its chip; masonry degrades cleanly at a low photo count; below-fold images
+  lazy-load without layout shift.
 
 ## Out of scope / follow-ups
 
 - Real food photography (owner upload) — `[[todo-food-photography]]`.
-- About / Contact dedicated visual polish.
+- Real About narrative (owner replaces seed chapters; adds later chapters).
+- Real gallery photos (owner upload replaces curated stock).
+- Contact / reservations page dedicated visual polish.
 - Existing menu **content** (names, prices, descriptions) is unchanged — this is
   presentation only. The new `signature` flag and best-guess origin/region metadata are
   the only data additions, and the **owner must review the origin guesses before
