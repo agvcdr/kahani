@@ -1,20 +1,32 @@
 /* ── Design tokens ─────────────────────────────────────────────────── */
 :root {
-  --color-maroon:      #1E0808;
-  --color-maroon-dark: #150505;
-  --color-maroon-mid:  #2D0C0C;
-  --color-gold:        #C9A028;
-  --color-warm-gold:   #D4AA50;
-  --color-gold-subtle: rgba(201,160,40,.12);
-  --color-cream:       #FFF8EF;
-  --color-cream-bg:    #F5EDE0;
-  --color-text:        #1A1208;
-  --color-text-muted:  #5C4A2A;
+  /* Saffron Fire palette (see design spec) */
+  --color-saffron:     #FF8C00; /* fills only + text on dark */
+  --color-saffron-ink: #A8500A; /* saffron-toned TEXT on cream (passes AA) */
+  --color-amber:       #FFB347; /* accents on dark only */
+  --color-scrim:       #1E0800;
+  --color-scrim-deep:  #281000;
+  --color-cream:       #FFF8F0;
+  --color-cream-bg:    #FBEFE0;
+  --color-ink:         #1C0800;
+  --color-ink-muted:   #8A5C2E;
   --color-white:       #FFFFFF;
-  --color-border:      #E8D9C0;
+  --color-border:      #EFE0CC;
 
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-body:    'Montserrat', Arial, Helvetica, sans-serif;
+  /* Temporary legacy aliases — map old token names onto the new palette so
+     pages not yet restyled keep rendering coherently. Removed per-page as
+     each later phase restyles its surfaces. */
+  --color-maroon:      var(--color-scrim);
+  --color-maroon-dark: var(--color-scrim-deep);
+  --color-maroon-mid:  #3A1607;
+  --color-gold:        var(--color-saffron);
+  --color-warm-gold:   var(--color-amber);
+  --color-gold-subtle: rgba(255,140,0,.12);
+  --color-text:        var(--color-ink);
+  --color-text-muted:  var(--color-ink-muted);
+
+  --font-display: 'Marcellus', Georgia, 'Times New Roman', serif;
+  --font-body:    'Karla', Arial, Helvetica, sans-serif;
 
   --nav-height:  64px;
   --container:   1200px;
