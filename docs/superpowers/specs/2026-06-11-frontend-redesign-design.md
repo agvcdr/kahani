@@ -117,6 +117,10 @@ Replaces the current horizontal `SiteNav`. Applies on **every page**.
   large Marcellus, staggered in: Home · Menu · About · Gallery · Find Us.
 - Hairline saffron rule, then secondary actions (Book a Table · Order Online · Gift
   Vouchers) and a contact line (address · phone).
+- **All CTAs are data-backed and hide when their URL is absent** (same pattern the homepage
+  already uses): Book a Table → `settings.bookTableUrl`, Order Online →
+  `settings.onlineOrderingUrl`, Gift Vouchers → `settings.giftVouchersUrl`, Find Us →
+  `settings.mapUrl`. External links open in a new tab with `rel="noopener noreferrer"`.
 - Hamburger morphs to ✕ and label to "Close"; the page brightens back on close.
 - One pattern on mobile and desktop.
 - **Accessibility:** keyboard operable, `aria-expanded`/`aria-controls`, focus moves
@@ -126,8 +130,12 @@ Replaces the current horizontal `SiteNav`. Applies on **every page**.
 ## Homepage
 
 1. **Header** — hidden dropdown nav (above).
-2. **Hero — Framed Full-Bleed carousel.** 4–5 signature dishes cross-fading edge to
-   edge behind the saffron frame + corner brackets + diamonds. Centred eyebrow
+2. **Hero — Framed Full-Bleed carousel.** 4–5 images cross-fading edge to edge behind the
+   saffron frame + corner brackets + diamonds. **Image source is a dedicated, curated
+   `heroImages` array** (can include atmosphere shots, not only dishes), decoupled from the
+   menu `signature` flag (which controls menu spotlights — a different surface). When
+   `heroImages` is empty it falls back to signature-dish images, then to stock. Centred
+   eyebrow
    ("Award-winning · Edinburgh"), headline **"Every plate has a story"** (the word
    "story" coloured amber, **not italic** — see Typography), and `Our Menu` /
    `Book a Table` actions. `prefers-reduced-motion` freezes on the first slide. New
@@ -166,17 +174,35 @@ A three-tier hierarchy per category:
    eyebrow, large Marcellus name, origin story, **dietary/allergen badges**, price,
    `Order Online` button; alternating left/right for rhythm; stacks on mobile.
 3. **Quiet list** — all remaining dishes as clean Marcellus names + `--color-saffron-ink`
-   prices + origin tags + **small dietary/allergen glyphs after the name**, grouped by
-   sub-section with a diamond sub-heading divider. No images.
+   prices + origin tags (where present) + **quiet glyphs after the name** (dietary tags,
+   spice chillies scaled to `spiceLevel`, seasonal/sold-out marks, and a single
+   "contains allergens" icon), grouped by sub-section with a diamond sub-heading divider.
+   No images.
 
 **Dietary & allergen states are mandatory, not optional (fixes a defect).** The project
-rules require clear states for sold out, seasonal, spicy, vegetarian, vegan,
-gluten-free, and contains-allergens, and the existing `DietaryBadge` already carries
-them. They must appear in **all three tiers**: as a small badge cluster in the two
-spotlight tiers, and as quiet inline glyphs (e.g. a leaf for veg, a chilli for spicy)
-immediately after the dish name in the list. A "sold out" item is visibly marked and its
-`Order Online` action is suppressed. This is a safety/legal requirement, so it is never
-dropped for aesthetics.
+rules require clear states for sold out, seasonal, spicy, vegetarian, vegan, gluten-free,
+and contains-allergens. **The data already exists** on `menuItem` — `dietary`
+(`vegetarian | vegan | gluten-free`), `allergens: AllergenId[]`, `spiceLevel: number`,
+`seasonal`, and `soldOut` — **but the rendering does not.** Today `DietaryBadge` shows only
+the three `dietary` tags; spice, seasonal, sold-out, and allergens are surfaced nowhere on
+a dish. So this is **net-new presentation work**, not reuse:
+
+- Extend `DietaryBadge` (or add a small complementary renderer) to cover all states.
+- **Spice is numeric** (`spiceLevel`), not a tag — render it as chillies scaled to the
+  level (e.g. 1–3 chillies, or hidden at 0), not a single on/off glyph.
+- **Seasonal** and **sold-out** reuse the existing `Badge` `seasonal` / `sold-out`
+  variants. A sold-out item is visibly marked and its `Order Online` action is suppressed.
+- **Allergens** get a defined, restrained treatment (see below), not every allergen as a
+  glyph everywhere.
+
+States appear in **all three tiers**: a small badge cluster in the two spotlight tiers, and
+quiet inline glyphs after the dish name in the list. This is a safety/legal requirement, so
+it is never dropped for aesthetics.
+
+**Allergen treatment.** `allergens` can be long per dish, so it is **not** spelled out
+inline in the quiet list. The list shows a single "contains allergens" affordance (icon)
+per dish; the two spotlight tiers list the named allergens in full; and
+`settings.allergenNotice` is shown once at the foot of every category page.
 
 **`Order Online`, not `Add to Order` (fixes a defect).** The site has **no in-house
 cart** — ordering is an external link. The data model exposes a **single global
@@ -233,10 +259,10 @@ The hero, pillars, and CTA always render; the award band is data-contingent as n
   component**. A chapter with no content **does not render** — no empty block, no gap.
   Any number of chapters is supported.
 
-**Content model:** an `aboutStory` structure (on `siteSettings` or a dedicated
-`aboutPage` document) with `intro` (text) and `chapters[]` (each: image, title, body,
-optional eyebrow). The existing `description` / `awards` / `cuisine` fields still feed the
-backbone. Seeds below are **best-guess for layout, flagged for owner review**
+**Content model:** a dedicated **`aboutPage` Sanity document** (not overloaded onto
+`siteSettings`) with `intro` (text) and `chapters[]` (each: image, title, body, optional
+eyebrow). The existing `description` / `awards` / `cuisine` fields on `siteSettings` still
+feed the backbone. Seeds below are **best-guess for layout, flagged for owner review**
 (`[[project-kahani-restaurant]]`).
 
 **Seed copy (placeholder):**
@@ -293,8 +319,11 @@ photos (`[[todo-food-photography]]`). Food tiles may reuse existing `menuItem` i
   inline glyphs, restyled sections. Most existing component classes inherit the new
   palette through tokens. Audit every saffron-on-cream text rule to use
   `--color-saffron-ink`, never `--color-saffron`.
-- `DietaryBadge` — reused in spotlights (badge cluster) and the quiet list (small inline
-  glyphs); add a compact/glyph variant if the current one is too heavy for the list.
+- `DietaryBadge` — **extended** (today it renders only the 3 `dietary` tags): add spice
+  (chillies scaled to `spiceLevel`), `seasonal` + `sold-out` (reuse existing `Badge`
+  variants), and a single "contains allergens" affordance. Used in spotlights (full badge
+  cluster + named allergens) and the quiet list (compact glyphs). `settings.allergenNotice`
+  rendered once per category page.
 - **New:** `HeroCarousel.tsx`; `SignatureSpotlight.tsx` (full-bleed + split variants). The
   **split variant is a shared `EditorialSplit`** — one reusable component used by both menu
   spotlights and About chapters, not two implementations.
@@ -303,7 +332,8 @@ photos (`[[todo-food-photography]]`). Food tiles may reuse existing `menuItem` i
   above the quiet list using the `signature` flag.
 - `web/src/app/about/page.tsx` — rebuild as the hybrid A/B page: backbone (hero, pillars,
   award band, CTA) + optional intro/chapters from `aboutStory`, reusing the editorial-split
-  component. Add `aboutStory` (`intro`, `chapters[]`) to the Sanity schema + query.
+  component. Add a dedicated `aboutPage` document (`intro`, `chapters[]`) to the Sanity
+  schema + query.
 - **New:** `web/src/app/gallery/page.tsx` + a `GalleryGrid.tsx` client component (masonry
   + filter chips, display-only). Add a `galleryImage` schema (`category`, `caption`,
   `featured`, order) and query; stock fallback. Add `Gallery` to the nav links.
@@ -314,8 +344,8 @@ photos (`[[todo-food-photography]]`). Food tiles may reuse existing `menuItem` i
   mounted by the web studio at `src/app/studio` — there is **no** separate embedded schema
   to keep in sync). Extend the category query to return signature items + images. Add an
   optional `origin` field, seeded only for promoted dishes (see Origin tags below).
-- Imagery: a `heroImages` array and per-category/per-dish stock fallbacks that yield to
-  Sanity images when present.
+- Imagery: a dedicated `heroImages` array (curated, **separate** from the menu `signature`
+  flag) plus per-category/per-dish stock fallbacks that yield to Sanity images when present.
 
 ### Scope this round
 Homepage + menu (index + category) + **About page (hybrid A/B)** + **Gallery page
@@ -346,8 +376,12 @@ Stages 2–5 each depend only on stage 1, so they can be reviewed and merged ind
 - Spot-check a category with 0, 1, and 3 signature items for graceful degradation.
 - **Contrast audit:** every text/background pairing ≥4.5:1 (normal) / ≥3:1 (large);
   specifically verify no pure `--color-saffron` text sits on cream.
-- **Dietary/allergen states** render in all three menu tiers; a "sold out" item is marked
-  and its `Order Online` action is suppressed.
+- **Dietary/allergen states** render in all three menu tiers: dietary tags, spice scaled to
+  `spiceLevel`, seasonal, and a "contains allergens" affordance (named in full in
+  spotlights); a "sold out" item is marked and its `Order Online` action is suppressed;
+  `settings.allergenNotice` appears once per category page.
+- CTAs (`bookTableUrl` / `onlineOrderingUrl` / `giftVouchersUrl` / `mapUrl`) link correctly
+  and **hide when their URL is absent**.
 - A dish with **no origin** renders cleanly (no empty tag, no stray separator).
 - Hero LCP: first slide is `priority`/preloaded; confirm no LCP regression.
 - Gallery: filter chips keyboard-operable with `aria-pressed`; a category with no images
