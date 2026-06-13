@@ -81,5 +81,17 @@ export function deskStructure(S: StructureBuilder) {
             .documentId('siteSettings')
             .schemaType('siteSettings')
         ),
+
+      S.divider(),
+
+      // ── About Page ─────────────────────────────────────────────────
+      S.listItem()
+        .title('About Page')
+        .child(
+          S.document()
+            .title('About Page')
+            .documentId('aboutPage')
+            .schemaType('aboutPage')
+        ),
     ])
 }
