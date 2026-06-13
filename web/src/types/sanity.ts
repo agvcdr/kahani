@@ -34,6 +34,7 @@ export interface SanityMenuItem {
   allergens: AllergenId[]
   spiceLevel: number
   featured?: boolean
+  signature?: boolean
   seasonal?: boolean
   soldOut?: boolean
   modifiers?: Array<{ id: string; label: string; priceDelta: number }>

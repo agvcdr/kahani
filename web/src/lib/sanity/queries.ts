@@ -10,7 +10,7 @@ export const MENU_ITEMS_BY_CATEGORY = `
     id, "slug": slug.current, name, description,
     prices, priceOnRequest, currency,
     dietary, allergens, spiceLevel,
-    featured, seasonal, soldOut,
+    featured, signature, origin, seasonal, soldOut,
     "modifiers": modifiers[]->{id, label, priceDelta},
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
     serves, size
@@ -23,7 +23,7 @@ export const MENU_ITEMS_BY_CATEGORY_IDS = `
     id, "slug": slug.current, name, description,
     prices, priceOnRequest, currency,
     dietary, allergens, spiceLevel,
-    featured, seasonal, soldOut,
+    featured, signature, origin, seasonal, soldOut,
     "modifiers": modifiers[]->{id, label, priceDelta},
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
     serves, size,
