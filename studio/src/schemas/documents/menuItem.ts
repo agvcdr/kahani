@@ -55,6 +55,13 @@ export const menuItem = defineType({
     defineField({ name: 'name', title: 'Name', type: 'string', group: 'details', validation: (R) => R.required() }),
     defineField({ name: 'description', title: 'Description', type: 'text', group: 'details', rows: 3 }),
     defineField({
+      name: 'origin',
+      title: 'Regional Origin',
+      type: 'string',
+      group: 'details',
+      description: 'Optional region (e.g. Kashmir, Punjab, Gujarat). Owner-reviewed; never guessed. Shown on spotlights and Chef\'s Selection where present.',
+    }),
+    defineField({
       name: 'categories',
       title: 'Categories',
       type: 'array',
@@ -135,6 +142,14 @@ export const menuItem = defineType({
       type: 'boolean',
       group: 'status',
       initialValue: false,
+    }),
+    defineField({
+      name: 'signature',
+      title: 'Signature (Spotlight)',
+      type: 'boolean',
+      group: 'status',
+      initialValue: false,
+      description: 'Promotes this dish to a photographic spotlight on its category page. First flagged item becomes the full-bleed hero; the next one or two become editorial splits.',
     }),
     defineField({
       name: 'seasonal',
