@@ -2,9 +2,11 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { publicClient } from '@/lib/sanity/client'
-import { ALL_MENU_CATEGORIES, MENU_ITEMS_BY_CATEGORY, MENU_ITEMS_BY_CATEGORY_IDS } from '@/lib/sanity/queries'
-import type { SanityMenuCategory, SanityMenuItem } from '@/types/sanity'
-import { MenuItemGrid } from '@/components/menu/MenuItemGrid'
+import { ALL_MENU_CATEGORIES, MENU_ITEMS_BY_CATEGORY, MENU_ITEMS_BY_CATEGORY_IDS, SITE_SETTINGS } from '@/lib/sanity/queries'
+import type { SanityMenuCategory, SanityMenuItem, SanitySiteSettings } from '@/types/sanity'
+import { selectSpotlights } from '@/lib/menu/spotlights'
+import { FullBleedSpotlight, DishEditorialSplit } from '@/components/menu/SignatureSpotlight'
+import { QuietList, type QuietListGroup } from '@/components/menu/QuietList'
 import { ALL_SECTIONS, SECTION_BY_SLUG } from '@/lib/menu/sections'
 
 export const revalidate = 3600
@@ -27,6 +29,33 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
   const categories = await publicClient.fetch<SanityMenuCategory[]>(ALL_MENU_CATEGORIES)
   const cat = categories.find(c => c.slug === categorySlug)
   return { title: cat?.label ?? 'Menu' }
+}
+
+function MenuTiers({
+  items,
+  groups,
+  orderUrl,
+}: {
+  items: SanityMenuItem[]
+  groups: QuietListGroup[]
+  orderUrl?: string | null
+}) {
+  const { fullBleed, splits } = selectSpotlights(items)
+  const chosen = new Set([fullBleed?.id, ...splits.map(s => s.id)].filter(Boolean))
+  // Drop promoted dishes from the quiet-list groups so nothing renders twice.
+  const quietGroups: QuietListGroup[] = groups
+    .map(g => ({ ...g, items: g.items.filter(i => !chosen.has(i.id)) }))
+    .filter(g => g.items.length)
+
+  return (
+    <>
+      {fullBleed && <FullBleedSpotlight item={fullBleed} orderUrl={orderUrl} />}
+      {splits.map((item, i) => (
+        <DishEditorialSplit key={item.id} item={item} orderUrl={orderUrl} side={i % 2 === 0 ? 'left' : 'right'} />
+      ))}
+      <QuietList groups={quietGroups} />
+    </>
+  )
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ categorySlug: string }> }) {
@@ -53,6 +82,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       if (catItems.length) itemsByCat.set(cat.id, catItems)
     }
 
+    const settings = await publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS)
+
+    const groups: QuietListGroup[] = section.showSubHeadings
+      ? sectionCats
+          .filter(cat => itemsByCat.has(cat.id))
+          .map(cat => ({ id: cat.id, label: cat.label, items: itemsByCat.get(cat.id)! }))
+      : [{ id: section.slug, items }]
+
     return (
       <div className="category-page">
         <div className="category-page__hero">
@@ -60,30 +97,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           <h1 className="category-page__title">{section.label}</h1>
           {section.description && <p className="category-page__desc">{section.description}</p>}
         </div>
-        <div className="container category-page__body">
-          <div className="menu-legend" role="note">
-            <span className="badge badge--veg">V</span> Vegetarian &nbsp;
-            <span className="badge badge--vegan">Ve</span> Vegan &nbsp;
-            <span className="badge badge--gf">GF</span> Gluten-Free &nbsp;
-            <span className="menu-item__star">★</span> Chef's Pick
+        <div className="category-page__body">
+          <MenuTiers items={items} groups={groups} orderUrl={settings?.onlineOrderingUrl} />
+          <div className="container">
+            <p className="allergen-notice">
+              {settings?.allergenNotice ??
+                'Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.'}
+            </p>
           </div>
-
-          {section.showSubHeadings ? (
-            sectionCats
-              .filter(cat => itemsByCat.has(cat.id))
-              .map(cat => (
-                <section key={cat.id} className="menu-subsection">
-                  <h2 className="menu-subsection__heading">{cat.label}</h2>
-                  <MenuItemGrid items={itemsByCat.get(cat.id)!} />
-                </section>
-              ))
-          ) : (
-            <MenuItemGrid items={items} />
-          )}
-
-          <p className="allergen-notice">
-            Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.
-          </p>
         </div>
       </div>
     )
@@ -99,6 +120,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     { categoryId: `category-${cat.id}` }
   )
 
+  const settings = await publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS)
+  const groups: QuietListGroup[] = [{ id: cat.id, items }]
+
   return (
     <div className="category-page">
       <div className="category-page__hero">
@@ -107,17 +131,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         {cat.description && <p className="category-page__desc">{cat.description}</p>}
         {cat.availability && <p className="category-page__avail">Available {cat.availability}</p>}
       </div>
-      <div className="container category-page__body">
-        <div className="menu-legend" role="note">
-          <span className="badge badge--veg">V</span> Vegetarian &nbsp;
-          <span className="badge badge--vegan">Ve</span> Vegan &nbsp;
-          <span className="badge badge--gf">GF</span> Gluten-Free &nbsp;
-          <span className="menu-item__star">★</span> Chef's Pick
+      <div className="category-page__body">
+        <MenuTiers items={items} groups={groups} orderUrl={settings?.onlineOrderingUrl} />
+        <div className="container">
+          <p className="allergen-notice">
+            {settings?.allergenNotice ??
+              'Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.'}
+          </p>
         </div>
-        <MenuItemGrid items={items} />
-        <p className="allergen-notice">
-          Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.
-        </p>
       </div>
     </div>
   )
