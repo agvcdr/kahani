@@ -93,3 +93,13 @@ export const FEATURED_MENU_ITEMS = `
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop }
   }
 `
+
+export const ABOUT_PAGE = `
+  *[_type == "aboutPage" && _id == "aboutPage"][0] {
+    intro,
+    chapters[] {
+      title, eyebrow, body,
+      "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop }
+    }
+  }
+`

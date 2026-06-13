@@ -137,3 +137,15 @@ export interface SanitySiteSettings {
   seoKeywords?: string[]
   seoOgImage?: { url: string; alt?: string } | null
 }
+
+export interface SanityAboutChapter {
+  title: string
+  eyebrow?: string | null
+  body?: string | null
+  image?: SanityImage | null
+}
+
+export interface SanityAboutPage {
+  intro?: string | null
+  chapters?: SanityAboutChapter[] | null
+}
