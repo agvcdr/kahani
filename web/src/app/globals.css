@@ -721,3 +721,80 @@ ul[role="list"] { list-style: none; }
 .btn--solid { background: var(--color-saffron); color: var(--color-scrim); border-color: var(--color-saffron); }
 .btn--solid:hover { background: var(--color-amber); border-color: var(--color-amber); color: var(--color-scrim); }
 .order-online-btn { font-size: .8rem; }
+
+/* ── About page ─────────────────────────────────────────────────────── */
+
+/* Hero variant — shorter than homepage (no action buttons) */
+.about-hero .hero__inner { padding-bottom: 3.5rem; }
+
+/* Intro statement */
+.about-intro { background: var(--color-cream); padding: 3.5rem 0 2rem; }
+.about-intro__text {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  line-height: 1.8;
+  color: var(--color-ink);
+  max-width: 68ch;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Chapters (editorial-split body text) */
+.about-chapters { background: var(--color-cream); }
+.editorial-split__body {
+  color: var(--color-ink-muted);
+  line-height: 1.8;
+  margin: .875rem 0 0;
+  max-width: 52ch;
+}
+
+/* Pillars */
+.about-pillars { background: var(--color-cream); padding: 4rem 0; }
+.about-pillars__heading {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-ink);
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+.about-pillars__diamond { color: var(--color-saffron-ink); font-size: .55em; margin-right: .6rem; vertical-align: middle; }
+.about-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.pillar-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+.pillar-card__icon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+.pillar-card__name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  margin: 0 0 .75rem;
+}
+.pillar-card__desc { font-size: .875rem; color: var(--color-ink-muted); line-height: 1.6; margin: 0; }
+
+/* Award band */
+.award-band {
+  background: var(--color-scrim-deep);
+  color: var(--color-cream);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.award-band__diamond { color: var(--color-saffron); font-size: .6rem; display: block; margin-bottom: 1rem; }
+.award-band__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .75rem; }
+.award-band__item { display: flex; flex-direction: column; align-items: center; gap: .2rem; }
+.award-band__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.05rem, 2.5vw, 1.3rem); color: var(--color-cream); }
+.award-band__body { font-size: .8rem; color: var(--color-amber); letter-spacing: .08em; text-transform: uppercase; }
+
+/* Visit CTA */
+.about-visit { background: var(--color-cream); padding: 4rem 0 5rem; text-align: center; }
+.about-visit__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.75rem; }
+.about-visit__menu-btn { border-color: var(--color-saffron-ink); color: var(--color-saffron-ink); }
+.about-visit__menu-btn:hover { background: var(--color-saffron-ink); color: var(--color-cream); border-color: var(--color-saffron-ink); }
