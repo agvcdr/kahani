@@ -64,12 +64,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   // ── Combined section (Starters, Mains, Wine, etc.) ────────────────────────
   if (section) {
-    const [allCategories, items] = await Promise.all([
+    const [allCategories, items, settings] = await Promise.all([
       publicClient.fetch<SanityMenuCategory[]>(ALL_MENU_CATEGORIES),
       publicClient.fetch<(SanityMenuItem & { categoryIds: string[] })[]>(
         MENU_ITEMS_BY_CATEGORY_IDS,
         { categoryRefs: section.categoryIds.map(id => `category-${id}`) }
       ),
+      publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS),
     ])
 
     const sectionCats = section.categoryIds
@@ -81,8 +82,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       const catItems = items.filter(item => item.categoryIds?.includes(cat.id))
       if (catItems.length) itemsByCat.set(cat.id, catItems)
     }
-
-    const settings = await publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS)
 
     const groups: QuietListGroup[] = section.showSubHeadings
       ? sectionCats
@@ -115,12 +114,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const cat = categories.find(c => c.slug === categorySlug)
   if (!cat) notFound()
 
-  const items = await publicClient.fetch<SanityMenuItem[]>(
-    MENU_ITEMS_BY_CATEGORY,
-    { categoryId: `category-${cat.id}` }
-  )
-
-  const settings = await publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS)
+  const [items, settings] = await Promise.all([
+    publicClient.fetch<SanityMenuItem[]>(MENU_ITEMS_BY_CATEGORY, { categoryId: `category-${cat.id}` }),
+    publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS),
+  ])
   const groups: QuietListGroup[] = [{ id: cat.id, items }]
 
   return (

@@ -30,19 +30,26 @@ export function QuietList({ groups }: { groups: QuietListGroup[] }) {
   if (!populated.length) return null
   return (
     <div className="quiet-list">
-      {populated.map(group => (
-        <section key={group.id} className="quiet-list__group">
-          {group.label && (
-            <div className="quiet-list__subheading">
-              <span className="quiet-list__diamond" aria-hidden="true">◆</span>
-              <h3 className="quiet-list__subheading-text">{group.label}</h3>
-            </div>
-          )}
+      {populated.map(group => {
+        const rows = (
           <ul className="quiet-list__rows" role="list">
             {group.items.map(item => <QuietRow key={item.id} item={item} />)}
           </ul>
-        </section>
-      ))}
+        )
+        if (!group.label) {
+          return <div key={group.id} className="quiet-list__group">{rows}</div>
+        }
+        const headingId = `quiet-${group.id}`
+        return (
+          <section key={group.id} className="quiet-list__group" aria-labelledby={headingId}>
+            <div className="quiet-list__subheading">
+              <span className="quiet-list__diamond" aria-hidden="true">◆</span>
+              <h3 id={headingId} className="quiet-list__subheading-text">{group.label}</h3>
+            </div>
+            {rows}
+          </section>
+        )
+      })}
     </div>
   )
 }

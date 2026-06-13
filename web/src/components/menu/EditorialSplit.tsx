@@ -19,7 +19,7 @@ export interface EditorialSplitProps {
  */
 export function EditorialSplit({ image, title, eyebrow, side, priority = false, children }: EditorialSplitProps) {
   return (
-    <section className={`editorial-split editorial-split--${side}`}>
+    <div className={`editorial-split editorial-split--${side}`}>
       <div className="editorial-split__media">
         <Image
           src={image.url}
@@ -35,6 +35,6 @@ export function EditorialSplit({ image, title, eyebrow, side, priority = false, 
         <h2 className="editorial-split__title">{title}</h2>
         {children}
       </div>
-    </section>
+    </div>
   )
 }

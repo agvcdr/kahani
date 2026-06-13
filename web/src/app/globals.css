@@ -469,7 +469,7 @@ ul[role="list"] { list-style: none; }
 .category-page__title { font-family: var(--font-display); font-size: clamp(2rem, 6vw, 3.5rem); color: var(--color-gold); line-height: 1.1; }
 .category-page__desc  { color: rgba(255,248,239,.75); margin-top: .6rem; font-size: .95rem; max-width: 60ch; }
 .category-page__avail { color: var(--color-warm-gold); margin-top: .4rem; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
-.category-page__body  { padding: 2.5rem 0; }
+.category-page__body  { padding: 0 0 3rem; }
 
 .menu-subsection { margin-bottom: 2.5rem; }
 .menu-subsection__heading {
@@ -655,10 +655,9 @@ ul[role="list"] { list-style: none; }
 }
 
 /* ── Menu index: diamond on group headings ─────────────────────────── */
-.menu-group__diamond { color: var(--color-saffron-ink); font-size: .6em; margin-right: .6rem; vertical-align: middle; }
+.menu-group__diamond { color: var(--color-saffron-ink); font-size: .6em; vertical-align: middle; }
 
 /* ── Category page body holds full-bleed spotlights, so no container ── */
-.category-page__body { padding: 0 0 3rem; }
 .category-page__body > .container { padding-top: 2rem; }
 
 /* ── Tier 1: full-bleed macro spotlight ────────────────────────────── */
@@ -718,5 +717,7 @@ ul[role="list"] { list-style: none; }
 .quiet-row__desc { color: var(--color-ink-muted); font-size: .85rem; line-height: 1.5; margin: .25rem 0 0; max-width: 60ch; }
 .quiet-row--sold-out .quiet-row__name { opacity: .55; text-decoration: line-through; }
 
-/* ── Order Online button spacing in spotlights ─────────────────────── */
+/* ── Order Online button ────────────────────────────────────────────── */
+.btn--solid { background: var(--color-saffron); color: var(--color-scrim); border-color: var(--color-saffron); }
+.btn--solid:hover { background: var(--color-amber); border-color: var(--color-amber); color: var(--color-scrim); }
 .order-online-btn { font-size: .8rem; }

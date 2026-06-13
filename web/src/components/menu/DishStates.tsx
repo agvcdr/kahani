@@ -4,6 +4,9 @@ import { Badge } from '@/components/ui/Badge'
 
 type StateItem = Pick<SanityMenuItem, 'dietary' | 'spiceLevel' | 'seasonal' | 'soldOut' | 'allergens'>
 
+// Spotlight/list spice rendering (chillies). Deliberately separate from the
+// dots-based SpiceIndicator used by the legacy MenuItemCard — different visual
+// language, same 0–5 clamping.
 function SpiceChillies({ level }: { level: number }) {
   if (!level) return null
   const clamped = Math.min(5, Math.max(0, level))
@@ -37,7 +40,7 @@ export function DishStates({ item, variant }: { item: StateItem; variant: 'clust
           aria-label="Contains allergens — ask your server"
           title="Contains allergens — ask your server"
         >
-          ⚠
+          {'⚠︎'}
         </span>
       )}
     </span>
