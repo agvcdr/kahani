@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen, within } from '@testing-library/react'
+import { render, screen, within, act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { SiteNav } from './SiteNav'
 
@@ -61,5 +61,14 @@ describe('SiteNav', () => {
     expect(screen.getByRole('banner')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /open menu/i })).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: 'Book a Table' })).toBeNull()
+  })
+
+  it('marks the header scrolled once the page is scrolled past the hero threshold', async () => {
+    render(<SiteNav settings={settings} />)
+    const header = screen.getByRole('banner')
+    expect(header.className).not.toContain('is-scrolled')
+    Object.defineProperty(window, 'scrollY', { value: 80, writable: true, configurable: true })
+    await act(async () => { window.dispatchEvent(new Event('scroll')) })
+    expect(header.className).toContain('is-scrolled')
   })
 })

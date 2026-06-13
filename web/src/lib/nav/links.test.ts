@@ -8,10 +8,18 @@ describe('NAV_LINKS', () => {
 })
 
 describe('secondaryActions', () => {
-  it('includes only actions whose URL is present', () => {
-    const actions = secondaryActions({ bookTableUrl: 'https://book', giftVouchersUrl: null, onlineOrderingUrl: 'https://order' })
-    expect(actions.map(a => a.label)).toEqual(['Book a Table', 'Order Online'])
-    expect(actions[0].href).toBe('https://book')
+  it('excludes Book a Table (shown as the persistent header button) and lists only present URLs', () => {
+    // Pass via a variable to avoid excess-property check (bookTableUrl is
+    // ignored by secondaryActions; SiteNav passes the full settings object).
+    const src = { bookTableUrl: 'https://book', giftVouchersUrl: null, onlineOrderingUrl: 'https://order' }
+    const actions = secondaryActions(src)
+    expect(actions.map(a => a.label)).toEqual(['Order Online'])
+    expect(actions[0].href).toBe('https://order')
+  })
+
+  it('includes Gift Vouchers when its URL is present', () => {
+    const actions = secondaryActions({ onlineOrderingUrl: 'https://order', giftVouchersUrl: 'https://gift' })
+    expect(actions.map(a => a.label)).toEqual(['Order Online', 'Gift Vouchers'])
   })
 
   it('returns an empty list when no URLs are set', () => {

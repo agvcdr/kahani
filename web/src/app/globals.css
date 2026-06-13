@@ -107,7 +107,8 @@ ul[role="list"] { list-style: none; }
 .btn--ghost:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.75); }
 
 /* ── Header (persistent minimal bar) ───────────────────────────────── */
-.site-header { position: sticky; top: 0; z-index: 100; }
+.site-header { position: sticky; top: 0; z-index: 100; transition: background .3s ease, box-shadow .3s ease; }
+.site-header.is-scrolled { background: rgba(30,8,0,.92); box-shadow: 0 2px 16px rgba(0,0,0,.25); }
 .site-header__bar {
   display: flex; align-items: center; justify-content: space-between;
   padding: .85rem 1.25rem; min-height: var(--nav-height); box-sizing: border-box;

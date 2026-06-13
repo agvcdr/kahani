@@ -9,6 +9,7 @@ import { NAV_LINKS, secondaryActions } from '@/lib/nav/links'
 export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const toggleRef = useRef<HTMLButtonElement>(null)
   const wasOpen = useRef(false)
@@ -35,6 +36,15 @@ export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
     }
   }, [open])
 
+  // Scroll-aware header: give the transparent header a scrim once the user
+  // scrolls off the dark hero, so cream text stays legible over light sections.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   const onPanelKeyDown = (e: React.KeyboardEvent) => {
     if (e.key !== 'Tab') return
     const focusables = panelRef.current?.querySelectorAll<HTMLElement>('a, button')
@@ -47,7 +57,7 @@ export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
   }
 
   return (
-    <header className="site-header">
+    <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="site-header__bar">
         <Link href="/" className="site-header__logo" aria-label="Kahani — home" onClick={() => setOpen(false)}>
           Kahani

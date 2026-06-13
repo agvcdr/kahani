@@ -12,14 +12,12 @@ export const NAV_LINKS: NavLink[] = [
 ]
 
 interface SecondarySource {
-  bookTableUrl?: string | null
   onlineOrderingUrl?: string | null
   giftVouchersUrl?: string | null
 }
 
 export function secondaryActions(s: SecondarySource): NavLink[] {
   return [
-    { href: s.bookTableUrl, label: 'Book a Table' },
     { href: s.onlineOrderingUrl, label: 'Order Online' },
     { href: s.giftVouchersUrl, label: 'Gift Vouchers' },
   ].filter((a): a is NavLink => Boolean(a.href))
