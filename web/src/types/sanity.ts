@@ -34,14 +34,12 @@ export interface SanityMenuItem {
   allergens: AllergenId[]
   spiceLevel: number
   featured?: boolean
-  signature?: boolean
   seasonal?: boolean
   soldOut?: boolean
   modifiers?: Array<{ id: string; label: string; priceDelta: number }>
   image?: SanityImage | null
   serves?: number | null
   size?: string | null
-  origin?: string | null
 }
 
 export interface SanityMenuCategory {
@@ -114,7 +112,6 @@ export interface SanitySiteSettings {
   cuisine?: string
   description?: string
   awards?: Array<{ title: string; body?: string }>
-  heroImages?: SanityImage[]
   phone?: string
   email?: string
   social?: SanitySocialLink[]
@@ -136,16 +133,4 @@ export interface SanitySiteSettings {
   seoDefaultDescription?: string
   seoKeywords?: string[]
   seoOgImage?: { url: string; alt?: string } | null
-}
-
-export interface SanityAboutChapter {
-  title: string
-  eyebrow?: string | null
-  body?: string | null
-  image?: SanityImage | null
-}
-
-export interface SanityAboutPage {
-  intro?: string | null
-  chapters?: SanityAboutChapter[] | null
 }

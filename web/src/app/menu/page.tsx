@@ -36,9 +36,7 @@ export default async function MenuPage() {
 
         {/* À La Carte */}
         <section className="menu-group" aria-labelledby="group-a-la-carte">
-          <h2 id="group-a-la-carte" className="menu-group__heading">
-            <span className="menu-group__diamond" aria-hidden="true">◆</span>À La Carte
-          </h2>
+          <h2 id="group-a-la-carte" className="menu-group__heading">À La Carte</h2>
           <div className="menu-group__cards">
             {FOOD_SECTIONS.map(s => (
               <Link key={s.slug} href={`/menu/${s.slug}`} className="menu-card">
@@ -51,9 +49,7 @@ export default async function MenuPage() {
 
         {/* Drinks */}
         <section className="menu-group" aria-labelledby="group-drinks">
-          <h2 id="group-drinks" className="menu-group__heading">
-            <span className="menu-group__diamond" aria-hidden="true">◆</span>Drinks
-          </h2>
+          <h2 id="group-drinks" className="menu-group__heading">Drinks</h2>
           <div className="menu-group__cards">
             {DRINK_SECTIONS.map(s => (
               <Link key={s.slug} href={`/menu/${s.slug}`} className="menu-card">
@@ -66,9 +62,7 @@ export default async function MenuPage() {
 
         {/* Set Menus */}
         <section className="menu-group" aria-labelledby="group-set-menus">
-          <h2 id="group-set-menus" className="menu-group__heading">
-            <span className="menu-group__diamond" aria-hidden="true">◆</span>Set Menus
-          </h2>
+          <h2 id="group-set-menus" className="menu-group__heading">Set Menus</h2>
           <div className="menu-group__cards">
             {SET_MENU_CARDS.map(card => {
               const sm = setBySlug[card.slug]

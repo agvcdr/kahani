@@ -4,9 +4,6 @@ import { SITE_SETTINGS, FEATURED_MENU_ITEMS } from '@/lib/sanity/queries'
 import type { SanitySiteSettings, SanityMenuItem } from '@/types/sanity'
 import { FeaturedCarousel } from '@/components/menu/FeaturedCarousel'
 import { HoursAndLocation } from '@/components/sections/HoursAndLocation'
-import { HeroCarousel } from '@/components/sections/HeroCarousel'
-import { DiamondHeading } from '@/components/sections/DiamondHeading'
-import { resolveHeroImages } from '@/lib/images/hero'
 
 export const revalidate = 3600
 
@@ -16,33 +13,36 @@ export default async function HomePage() {
     publicClient.fetch<SanityMenuItem[]>(FEATURED_MENU_ITEMS),
   ])
 
-  const heroImages = resolveHeroImages(settings, featured)
-
   return (
     <>
       <section className="hero" aria-labelledby="hero-heading">
-        <HeroCarousel images={heroImages} />
-        <div className="hero__scrim" aria-hidden="true" />
-        <div className="hero__frame" aria-hidden="true">
-          <span className="hero__corner hero__corner--tl" />
-          <span className="hero__corner hero__corner--tr" />
-          <span className="hero__corner hero__corner--bl" />
-          <span className="hero__corner hero__corner--br" />
-          <span className="hero__diamond hero__diamond--top" />
-          <span className="hero__diamond hero__diamond--bottom" />
-        </div>
-
+        <video
+          className="hero__video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="hero__overlay" aria-hidden="true" />
         <div className="hero__inner">
-          <p className="hero__eyebrow">Award-winning · Edinburgh</p>
-          <h1 id="hero-heading" className="hero__title">
-            Every plate has a <span className="hero__title-accent">story</span>
+          <h1 id="hero-heading" className="hero__logo-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/kahani-logo-primary-nobg.svg" alt="Kahani Indian Street Food" className="hero__logo" />
           </h1>
+          {settings?.awards?.[0] && (
+            <p className="hero__award">🏆 {settings.awards[0].title} — {settings.awards[0].body}</p>
+          )}
           <div className="hero__actions">
-            <Link href="/menu" className="btn btn--primary">Our Menu</Link>
+            <Link href="/menu" className="btn btn--primary">View Menu</Link>
             {settings?.bookTableUrl && (
-              <a href={settings.bookTableUrl} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-                Book a Table
-              </a>
+              <a href={settings.bookTableUrl} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">Book a Table</a>
+            )}
+            {settings?.onlineOrderingUrl && (
+              <a href={settings.onlineOrderingUrl} className="btn btn--ghost" target="_blank" rel="noopener noreferrer">Order Online</a>
             )}
           </div>
         </div>
@@ -51,7 +51,7 @@ export default async function HomePage() {
       {featured?.length > 0 && (
         <section className="featured-section" aria-labelledby="featured-heading">
           <div className="container">
-            <DiamondHeading id="featured-heading">Chef&apos;s Selection</DiamondHeading>
+            <h2 id="featured-heading" className="section-heading section-heading--center">Chef's Recommendations</h2>
           </div>
           <FeaturedCarousel items={featured} />
           <div className="container">
@@ -67,7 +67,7 @@ export default async function HomePage() {
       {(settings?.bookTableUrl || settings?.onlineOrderingUrl || settings?.phone) && (
         <section className="contact-actions" aria-labelledby="contact-actions-heading">
           <div className="container">
-            <DiamondHeading id="contact-actions-heading">Ready to Visit?</DiamondHeading>
+            <h2 id="contact-actions-heading" className="section-heading section-heading--center">Ready to Visit?</h2>
             <div className="contact-actions__grid">
               {settings.phone && (
                 <a href={`tel:${settings.phone.replace(/\s/g, '')}`} className="contact-card">

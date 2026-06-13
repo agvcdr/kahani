@@ -10,7 +10,7 @@ export const MENU_ITEMS_BY_CATEGORY = `
     id, "slug": slug.current, name, description,
     prices, priceOnRequest, currency,
     dietary, allergens, spiceLevel,
-    featured, signature, origin, seasonal, soldOut,
+    featured, seasonal, soldOut,
     "modifiers": modifiers[]->{id, label, priceDelta},
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
     serves, size
@@ -23,7 +23,7 @@ export const MENU_ITEMS_BY_CATEGORY_IDS = `
     id, "slug": slug.current, name, description,
     prices, priceOnRequest, currency,
     dietary, allergens, spiceLevel,
-    featured, signature, origin, seasonal, soldOut,
+    featured, seasonal, soldOut,
     "modifiers": modifiers[]->{id, label, priceDelta},
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
     serves, size,
@@ -53,7 +53,6 @@ export const SET_MENU_BY_SLUG = `
 export const SITE_SETTINGS = `
   *[_type == "siteSettings" && _id == "siteSettings"][0] {
     name, shortName, tagline, cuisine, description, awards,
-    "heroImages": heroImages[]{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
     phone, email, social,
     address, neighbourhood, nearbyLandmarks, mapUrl, coordinates,
     timezone, regularHours, holidayHours, closureNotices, hoursNotes,
@@ -89,17 +88,7 @@ export const PRINT_MENU_DATA = `{
 export const FEATURED_MENU_ITEMS = `
   *[_type == "menuItem" && featured == true && available == true][0...6] {
     id, "slug": slug.current, name, description,
-    prices, priceOnRequest, dietary, allergens, spiceLevel, origin,
+    prices, priceOnRequest, dietary, allergens, spiceLevel,
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop }
-  }
-`
-
-export const ABOUT_PAGE = `
-  *[_type == "aboutPage" && _id == "aboutPage"][0] {
-    intro,
-    chapters[] {
-      title, eyebrow, body,
-      "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop }
-    }
   }
 `
