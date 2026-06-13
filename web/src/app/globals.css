@@ -653,3 +653,70 @@ ul[role="list"] { list-style: none; }
   body { background: white !important; }
   #main-content { padding: 0 !important; margin: 0 !important; }
 }
+
+/* ── Menu index: diamond on group headings ─────────────────────────── */
+.menu-group__diamond { color: var(--color-saffron-ink); font-size: .6em; margin-right: .6rem; vertical-align: middle; }
+
+/* ── Category page body holds full-bleed spotlights, so no container ── */
+.category-page__body { padding: 0 0 3rem; }
+.category-page__body > .container { padding-top: 2rem; }
+
+/* ── Tier 1: full-bleed macro spotlight ────────────────────────────── */
+.spotlight--full { position: relative; min-height: clamp(360px, 60vh, 560px); display: flex; align-items: flex-end; overflow: hidden; }
+.spotlight__media { position: absolute; inset: 0; }
+.spotlight__img { object-fit: cover; }
+.spotlight__vignette { position: absolute; inset: 0; background: linear-gradient(115deg, rgba(20,7,0,.82) 0%, rgba(20,7,0,.45) 45%, rgba(20,7,0,.05) 80%); }
+.spotlight__overlay { position: relative; padding: 2rem 1.5rem 2.5rem; max-width: 40rem; color: var(--color-cream); }
+.spotlight__name { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.1; color: var(--color-cream); }
+.spotlight__origin { color: var(--color-amber); letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; margin: .5rem 0 0; }
+.spotlight__desc { color: rgba(255,248,239,.85); line-height: 1.6; margin: .75rem 0 0; max-width: 48ch; }
+.spotlight--full .allergen-list { color: rgba(255,248,239,.7); }
+.spotlight__footer { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin-top: 1.25rem; }
+.spotlight--full .price { color: var(--color-amber); font-size: 1.25rem; font-weight: 700; }
+.spotlight--sold-out .spotlight__name { opacity: .85; }
+
+/* ── Tier 2: editorial split (shared with About) ───────────────────── */
+.editorial-split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; max-width: 1100px; margin: 3.5rem auto; padding: 0 1.5rem; }
+.editorial-split--right { direction: rtl; }
+.editorial-split--right > * { direction: ltr; }
+.editorial-split__media { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; }
+.editorial-split__img { object-fit: cover; }
+.editorial-split__eyebrow { color: var(--color-saffron-ink); letter-spacing: .12em; text-transform: uppercase; font-size: .75rem; margin: 0 0 .5rem; }
+.editorial-split__title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.75rem, 4vw, 2.75rem); color: var(--color-ink); line-height: 1.1; margin: 0; }
+.editorial-split .spotlight__origin { color: var(--color-saffron-ink); }
+.editorial-split .spotlight__desc { color: var(--color-ink-muted); }
+.editorial-split .price { color: var(--color-saffron-ink); font-size: 1.15rem; font-weight: 700; }
+@media (max-width: 860px) {
+  .editorial-split { grid-template-columns: 1fr; margin: 2.5rem auto; }
+  .editorial-split--right { direction: ltr; }
+}
+
+/* ── Spotlight state cluster ───────────────────────────────────────── */
+.dish-states { display: inline-flex; align-items: center; gap: .4rem; flex-wrap: wrap; }
+.dish-states--cluster { margin: .75rem 0 0; }
+.spice-chillies { display: inline-flex; gap: 1px; font-size: .8rem; line-height: 1; }
+.spice-chillies__chilli { filter: grayscale(1) opacity(.35); }
+.spice-chillies__chilli--on { filter: none; }
+.dish-states__allergen { color: var(--color-saffron-ink); font-size: .85rem; cursor: help; }
+
+/* ── Tier 3: quiet list ────────────────────────────────────────────── */
+.quiet-list { max-width: 760px; margin: 3rem auto 0; padding: 0 1.5rem; }
+.quiet-list__group { margin-bottom: 2.5rem; }
+.quiet-list__subheading { display: flex; align-items: center; gap: .75rem; margin-bottom: 1.25rem; }
+.quiet-list__diamond { color: var(--color-saffron-ink); font-size: .55rem; }
+.quiet-list__subheading-text { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; color: var(--color-ink); margin: 0; }
+.quiet-list__subheading::after { content: ''; flex: 1; height: 1px; background: var(--color-border); }
+.quiet-list__rows { list-style: none; margin: 0; padding: 0; }
+.quiet-row { padding: .75rem 0; border-bottom: 1px solid var(--color-border); }
+.quiet-row__head { display: flex; align-items: baseline; gap: .5rem; }
+.quiet-row__name { font-family: var(--font-display); font-size: 1.05rem; color: var(--color-ink); }
+.quiet-row__origin { color: var(--color-saffron-ink); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
+.quiet-row .dish-states { font-size: .9rem; }
+.quiet-row__dots { flex: 1; border-bottom: 1px dotted var(--color-border); transform: translateY(-3px); min-width: 1.5rem; }
+.quiet-row__price { color: var(--color-saffron-ink); font-weight: 700; white-space: nowrap; }
+.quiet-row__price .price { color: var(--color-saffron-ink); }
+.quiet-row__desc { color: var(--color-ink-muted); font-size: .85rem; line-height: 1.5; margin: .25rem 0 0; max-width: 60ch; }
+.quiet-row--sold-out .quiet-row__name { opacity: .55; text-decoration: line-through; }
+
+/* ── Order Online button spacing in spotlights ─────────────────────── */
+.order-online-btn { font-size: .8rem; }
