@@ -28,7 +28,7 @@
   --font-display: 'Marcellus', Georgia, 'Times New Roman', serif;
   --font-body:    'Karla', Arial, Helvetica, sans-serif;
 
-  --nav-height:  64px;
+  --nav-height:  68px;
   --container:   1200px;
   --radius:      14px;
   --radius-sm:   8px;
@@ -99,7 +99,8 @@ ul[role="list"] { list-style: none; }
 .site-header { position: sticky; top: 0; z-index: 100; }
 .site-header__bar {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 1rem 1.25rem; max-width: var(--container); margin: 0 auto;
+  padding: .85rem 1.25rem; min-height: var(--nav-height); box-sizing: border-box;
+  max-width: var(--container); margin: 0 auto;
 }
 .site-header__logo {
   font-family: var(--font-display); font-size: 1.4rem; letter-spacing: .3em;
@@ -167,56 +168,66 @@ ul[role="list"] { list-style: none; }
   .site-overlay__link { transition-delay: 0s !important; transform: none; }
 }
 
-/* ── Hero ──────────────────────────────────────────────────────────── */
+/* ── Hero — Framed Full-Bleed carousel ─────────────────────────────── */
 .hero {
-  background: var(--color-maroon);
-  background-image: radial-gradient(ellipse at 30% 50%, #3D1010 0%, #1E0808 65%);
-  color: var(--color-cream); text-align: center;
+  position: relative; overflow: hidden;
   min-height: calc(100svh - var(--nav-height));
   display: flex; align-items: center; justify-content: center;
-  padding: 4rem 1.25rem;
-  position: relative; overflow: hidden;
+  padding: 4rem 1.5rem; text-align: center;
+  background: var(--color-scrim); color: var(--color-cream);
 }
-.hero__video {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: 0; pointer-events: none;
-}
-.hero__overlay {
+
+/* Cross-fading background image stack (decorative). */
+.hero-carousel, .hero-carousel__slide { position: absolute; inset: 0; }
+.hero-carousel__slide { opacity: 0; transition: opacity 1.2s ease; }
+.hero-carousel__slide.is-active { opacity: 1; }
+.hero-carousel__img { object-fit: cover; }
+
+/* Warm scrim so cream type stays legible over any photo. */
+.hero__scrim {
   position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 40%, rgba(30,8,8,.35) 0%, rgba(30,8,8,.75) 80%),
-    linear-gradient(180deg, rgba(30,8,8,.4) 0%, rgba(30,8,8,.65) 60%, rgba(30,8,8,.85) 100%);
+    radial-gradient(ellipse at 50% 40%, rgba(30,8,0,.35) 0%, rgba(30,8,0,.78) 80%),
+    linear-gradient(180deg, rgba(30,8,0,.45) 0%, rgba(30,8,0,.6) 55%, rgba(40,16,0,.9) 100%);
 }
-.hero::before {
-  content: ''; position: absolute; inset: 0; z-index: 2;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A028' fill-opacity='0.03'%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-}
-.hero__inner { position: relative; z-index: 3; max-width: 700px; width: 100%; }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero__video { display: none; }
+/* Saffron inset frame + corner brackets + top/bottom diamonds. */
+.hero__frame {
+  position: absolute; inset: 18px; z-index: 2; pointer-events: none;
+  border: 1px solid rgba(255,140,0,.55);
 }
+.hero__corner { position: absolute; width: 34px; height: 34px; }
+.hero__corner--tl { top: -1px; left: -1px; border-top: 2px solid var(--color-saffron); border-left: 2px solid var(--color-saffron); }
+.hero__corner--tr { top: -1px; right: -1px; border-top: 2px solid var(--color-saffron); border-right: 2px solid var(--color-saffron); }
+.hero__corner--bl { bottom: -1px; left: -1px; border-bottom: 2px solid var(--color-saffron); border-left: 2px solid var(--color-saffron); }
+.hero__corner--br { bottom: -1px; right: -1px; border-bottom: 2px solid var(--color-saffron); border-right: 2px solid var(--color-saffron); }
+.hero__diamond {
+  position: absolute; left: 50%; width: 10px; height: 10px;
+  background: var(--color-saffron); transform: translateX(-50%) rotate(45deg);
+}
+.hero__diamond--top { top: -6px; }
+.hero__diamond--bottom { bottom: -6px; }
+
+.hero__inner { position: relative; z-index: 3; max-width: 720px; width: 100%; }
 .hero__eyebrow {
   font-size: .75rem; letter-spacing: .25em; text-transform: uppercase;
-  color: var(--color-warm-gold); margin-bottom: 1.25rem;
+  color: var(--color-amber); margin-bottom: 1.25rem;
 }
 .hero__title {
-  font-family: var(--font-display); font-size: clamp(3rem, 10vw, 6rem);
-  font-weight: 700; color: var(--color-gold); letter-spacing: .08em; line-height: 1;
-  margin-bottom: 1rem;
+  font-family: var(--font-display); font-size: clamp(2.6rem, 9vw, 5.5rem);
+  font-weight: 400; color: var(--color-cream); letter-spacing: .02em;
+  line-height: 1.05; margin-bottom: 2rem;
 }
-.hero__logo-wrap { margin: 0 0 2.25rem; }
-.hero__logo { max-width: 480px; width: 100%; height: auto; display: block; margin: 0 auto; }
-.hero__award {
-  display: inline-block; font-size: .78rem; color: var(--color-warm-gold);
-  margin-bottom: 2.5rem; letter-spacing: .1em;
-  padding: .5rem 1.25rem;
-  border: 1px solid rgba(201,160,40,.3); border-radius: var(--radius-pill);
-}
+.hero__title-accent { color: var(--color-amber); } /* emphasis via colour, never italic */
 .hero__actions { display: flex; gap: .875rem; justify-content: center; flex-wrap: wrap; }
+
+/* Reduced motion: the carousel component already freezes on slide 1; nothing extra needed here. */
+
+/* Small phones: thin the frame and drop the corner brackets so the headline breathes. */
+@media (max-width: 380px) {
+  .hero__frame { inset: 10px; }
+  .hero__corner { display: none; }
+}
 
 /* ── Featured section ──────────────────────────────────────────────── */
 .featured-section {
