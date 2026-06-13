@@ -682,7 +682,23 @@ git commit -m "chore(web): phase 1 foundation gate fixes" --allow-empty
 
 ## Notes for later phases (not part of this plan)
 
-- The legacy token aliases in Task 2 are intentionally temporary. As Phases 2–5 restyle each surface, replace alias references (`--color-maroon`, `--color-gold`, etc.) with direct Saffron Fire tokens, then delete the aliases once nothing references them.
+- The legacy token aliases in Task 2 are intentionally temporary. As Phases 2–5 restyle each surface, replace alias references (`--color-maroon`, `--color-gold`, etc.) with direct Saffron Fire tokens, then delete the aliases once nothing references them. (`--color-maroon-dark` is already unreferenced after the footer recolour — safe to drop in the next cleanup.)
 - The `EditorialSplit` shared component, `HeroCarousel`, `SignatureSpotlight`, the menu dietary/spice/allergen rendering, the `aboutPage` document, and the `galleryImage` schema are all introduced in their own phase plans, each written when that phase begins so it reflects the real state after Foundation lands.
-- The nav already links to `/gallery`, which 404s until Phase 5 ships — acceptable between phases; Phase 5 adds the route.
+- The nav already links to `/gallery`, which 404s until Phase 5 ships — acceptable between phases; Phase 5 adds the route. **Hard gate: do not merge the branch to main until `/gallery` exists (Phase 5) or a stub is added.**
+
+## Phase 1 completion status & review follow-ups (resolved 2026-06-12)
+
+Phase 1 is **complete**: 6 commits (`137b8a1`..`2ece0b3` on `feat/frontend-redesign`). Runnable gates green — `tsc --noEmit` clean, 9/9 Vitest tests pass, `next build` reaches "✓ Compiled successfully".
+
+**Environment constraints (this worktree has no Sanity credentials):**
+- `next build` cannot finish SSG — it fails *after* compile with `Configuration must contain 'projectId'`. Treat "✓ Compiled successfully" as the build signal until run in a credentialed env.
+- `npm run lint` is not configured (interactive ESLint setup) — set up ESLint non-interactively before relying on it in CI.
+- Live visual / responsive / a11y QA needs a running site (Sanity creds) and is **deferred** to a credentialed environment.
+
+**Carried-forward follow-ups for Phase 2 (homepage/hero, where visual QA is possible):**
+1. **Header legibility on scroll:** `.site-header` is transparent with cream text — correct over the dark hero, but the sticky header can become illegible over light sections on scroll and on not-yet-restyled inner pages. Decide a scroll-aware or scrim background when the header/hero relationship is finalised.
+2. **Animated close:** the overlay uses `hidden={!open}` (a11y-correct, but no fade-out on close). When visual QA is available, evaluate switching to `inert={!open}` + `aria-hidden` so the `.45s` close transition can run while keeping the closed overlay out of the tab order and a11y tree. Do NOT switch to `aria-hidden`-only (leaves links tabbable).
+3. **`Book a Table` duplication:** appears in both the persistent header bar and the overlay secondary actions (per spec). When the overlay is open both are visible. Decide whether to dedupe (e.g. drop `bookTableUrl` from `secondaryActions`).
+4. **`--nav-height` (64px)** is a fixed token while `.site-header__bar` height is content-driven (~60–68px); align them (explicit header height or token update) so `.hero`'s `calc(100svh - var(--nav-height))` is exact.
+5. **`--color-saffron-ink` (#A8500A)** is defined but unused — it is the AA-passing token for saffron text on cream. Phases that put saffron-coloured text on cream MUST use it, never `--color-saffron` (which fails contrast on cream).
 ```
