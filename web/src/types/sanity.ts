@@ -114,6 +114,11 @@ export interface SanityAboutChapter {
   image?: SanityImage | null
 }
 
+export interface SanityAboutPage {
+  intro?: string | null
+  chapters?: SanityAboutChapter[] | null
+}
+
 export interface SanitySiteSettings {
   name: string
   shortName?: string
