@@ -35,6 +35,14 @@ export const siteSettings = defineType({
         }),
       ],
     }),
+    defineField({
+      name: 'heroImages',
+      title: 'Hero Images',
+      description: 'Curated full-bleed homepage hero photos. Falls back to featured dishes, then stock, when empty.',
+      type: 'array',
+      group: 'restaurant',
+      of: [defineArrayMember({ type: 'image', options: { hotspot: true }, fields: [defineField({ name: 'alt', type: 'string', title: 'Alt text' })] })],
+    }),
     defineField({ name: 'allergenNotice', title: 'Allergen Notice', type: 'text', group: 'restaurant', rows: 3 }),
 
     // Hours

@@ -40,6 +40,7 @@ export interface SanityMenuItem {
   image?: SanityImage | null
   serves?: number | null
   size?: string | null
+  origin?: string | null
 }
 
 export interface SanityMenuCategory {
@@ -112,6 +113,7 @@ export interface SanitySiteSettings {
   cuisine?: string
   description?: string
   awards?: Array<{ title: string; body?: string }>
+  heroImages?: SanityImage[]
   phone?: string
   email?: string
   social?: SanitySocialLink[]

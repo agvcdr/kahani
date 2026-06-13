@@ -53,6 +53,7 @@ export const SET_MENU_BY_SLUG = `
 export const SITE_SETTINGS = `
   *[_type == "siteSettings" && _id == "siteSettings"][0] {
     name, shortName, tagline, cuisine, description, awards,
+    "heroImages": heroImages[]{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop },
     phone, email, social,
     address, neighbourhood, nearbyLandmarks, mapUrl, coordinates,
     timezone, regularHours, holidayHours, closureNotices, hoursNotes,
@@ -88,7 +89,7 @@ export const PRINT_MENU_DATA = `{
 export const FEATURED_MENU_ITEMS = `
   *[_type == "menuItem" && featured == true && available == true][0...6] {
     id, "slug": slug.current, name, description,
-    prices, priceOnRequest, dietary, allergens, spiceLevel,
+    prices, priceOnRequest, dietary, allergens, spiceLevel, origin,
     "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop }
   }
 `
