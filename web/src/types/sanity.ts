@@ -119,6 +119,21 @@ export interface SanityAboutPage {
   chapters?: SanityAboutChapter[] | null
 }
 
+export interface SanityGalleryImage {
+  id: string
+  category: 'food' | 'interior' | 'events'
+  caption?: string | null
+  featured?: boolean
+  order?: number | null
+  image: {
+    url: string
+    alt: string
+    lqip?: string | null
+    hotspot?: { x: number; y: number } | null
+    crop?: { top: number; bottom: number; left: number; right: number } | null
+  }
+}
+
 export interface SanitySiteSettings {
   name: string
   shortName?: string

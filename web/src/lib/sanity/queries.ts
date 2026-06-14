@@ -102,3 +102,11 @@ export const ABOUT_PAGE = `
     }
   }
 `
+
+export const GALLERY_IMAGES = `
+  *[_type == "galleryImage"] | order(order asc, _createdAt desc) {
+    "id": _id,
+    category, caption, featured, order,
+    "image": image{ alt, "url": asset->url, "lqip": asset->metadata.lqip, hotspot, crop }
+  }
+`
