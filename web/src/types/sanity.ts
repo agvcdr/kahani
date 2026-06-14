@@ -127,7 +127,7 @@ export interface SanityGalleryImage {
   order?: number | null
   image: {
     url: string
-    alt: string
+    alt: string | null
     lqip?: string | null
     hotspot?: { x: number; y: number } | null
     crop?: { top: number; bottom: number; left: number; right: number } | null

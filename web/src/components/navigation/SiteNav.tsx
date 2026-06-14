@@ -87,7 +87,8 @@ export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
       <div
         className={`site-overlay${open ? ' is-open' : ''}`}
         id="site-overlay"
-        hidden={!open}
+        aria-hidden={!open}
+        inert={!open || undefined}
         onClick={() => setOpen(false)}
       >
         <div className="site-overlay__container">

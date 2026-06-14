@@ -38,7 +38,7 @@ export function FeaturedCarousel({ items }: { items: SanityMenuItem[] }) {
             </div>
             <div className="featured-card__body">
               <h3 className="featured-card__name">
-                <span className="featured-card__star" aria-hidden="true">★</span>
+                <span className="featured-card__diamond" aria-hidden="true">◆</span>
                 {item.name}
               </h3>
               <div className="featured-card__meta">

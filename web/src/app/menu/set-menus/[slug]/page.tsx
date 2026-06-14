@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { publicClient } from '@/lib/sanity/client'
-import { ALL_SET_MENUS, SET_MENU_BY_SLUG } from '@/lib/sanity/queries'
-import type { SanitySetMenu } from '@/types/sanity'
+import { ALL_SET_MENUS, SET_MENU_BY_SLUG, SITE_SETTINGS } from '@/lib/sanity/queries'
+import type { SanitySetMenu, SanitySiteSettings } from '@/types/sanity'
 import { SetMenuDisplay } from '@/components/menu/SetMenuDisplay'
 
 export const revalidate = 3600
@@ -21,7 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function SetMenuPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const menu = await publicClient.fetch<SanitySetMenu>(SET_MENU_BY_SLUG, { slug })
+  const [menu, settings] = await Promise.all([
+    publicClient.fetch<SanitySetMenu>(SET_MENU_BY_SLUG, { slug }),
+    publicClient.fetch<SanitySiteSettings | null>(SITE_SETTINGS),
+  ])
   if (!menu) notFound()
 
   return (
@@ -35,7 +38,8 @@ export default async function SetMenuPage({ params }: { params: Promise<{ slug: 
       <div className="container set-menu-page__body">
         <SetMenuDisplay menu={menu} />
         <p className="allergen-notice">
-          Please inform your server of any allergies or dietary requirements before ordering.
+          {settings?.allergenNotice ??
+            'Please inform your server of any allergies or dietary requirements before ordering.'}
         </p>
       </div>
     </div>

@@ -31,6 +31,12 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryS
   return { title: cat?.label ?? 'Menu' }
 }
 
+const ALLERGEN_FALLBACK = 'Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.'
+
+function AllergenNotice({ notice }: { notice?: string | null }) {
+  return <p className="allergen-notice">{notice ?? ALLERGEN_FALLBACK}</p>
+}
+
 function MenuTiers({
   items,
   groups,
@@ -101,10 +107,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
         <div className="category-page__body">
           <MenuTiers items={items} groups={groups} orderUrl={settings?.onlineOrderingUrl} />
           <div className="container">
-            <p className="allergen-notice">
-              {settings?.allergenNotice ??
-                'Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.'}
-            </p>
+            <AllergenNotice notice={settings?.allergenNotice} />
           </div>
         </div>
       </div>
@@ -135,10 +138,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       <div className="category-page__body">
         <MenuTiers items={items} groups={groups} orderUrl={settings?.onlineOrderingUrl} />
         <div className="container">
-          <p className="allergen-notice">
-            {settings?.allergenNotice ??
-              'Please inform your server of any allergies or dietary requirements. Full allergen information is available on request.'}
-          </p>
+          <AllergenNotice notice={settings?.allergenNotice} />
         </div>
       </div>
     </div>

@@ -22,6 +22,8 @@ export function resolveSpotlightImage(item: SanityMenuItem): ResolvedImage {
   if (item.image?.url) {
     return { url: item.image.url, alt: item.image.alt ?? item.name }
   }
-  const pick = SPOTLIGHT_FALLBACK_IMAGES[hash(item.id) % SPOTLIGHT_FALLBACK_IMAGES.length]
+  const images = SPOTLIGHT_FALLBACK_IMAGES
+  if (!images.length) return { url: '', alt: item.name }
+  const pick = images[hash(item.id) % images.length]
   return { url: pick.url, alt: pick.alt }
 }

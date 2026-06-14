@@ -7,7 +7,7 @@ export function GalleryTile({ item }: { item: SanityGalleryImage }) {
       <div className="gallery-tile__media">
         <Image
           src={item.image.url}
-          alt={item.image.alt}
+          alt={item.image.alt ?? item.caption ?? ''}
           fill
           sizes="(max-width: 600px) 100vw, (max-width: 960px) 50vw, 33vw"
           className="gallery-tile__img"
