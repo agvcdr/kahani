@@ -81,5 +81,29 @@ export function deskStructure(S: StructureBuilder) {
             .documentId('siteSettings')
             .schemaType('siteSettings')
         ),
+
+      S.divider(),
+
+      // ── About Page ─────────────────────────────────────────────────
+      S.listItem()
+        .title('About Page')
+        .child(
+          S.document()
+            .title('About Page')
+            .documentId('aboutPage')
+            .schemaType('aboutPage')
+        ),
+
+      S.divider(),
+
+      // ── Gallery Images ─────────────────────────────────────────────
+      S.listItem()
+        .title('Gallery Images')
+        .child(
+          S.documentList()
+            .title('Gallery Images')
+            .filter('_type == "galleryImage"')
+            .defaultOrdering([{ field: 'order', direction: 'asc' }, { field: '_createdAt', direction: 'desc' }])
+        ),
     ])
 }
