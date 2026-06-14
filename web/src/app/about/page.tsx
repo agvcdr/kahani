@@ -2,16 +2,31 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { publicClient } from '@/lib/sanity/client'
 import { SITE_SETTINGS, ABOUT_PAGE } from '@/lib/sanity/queries'
-import type { SanitySiteSettings, SanityAboutPage } from '@/types/sanity'
-import { HeroCarousel } from '@/components/sections/HeroCarousel'
+import type { SanitySiteSettings, SanityAboutPage, SanityAboutChapter } from '@/types/sanity'
 import { DiamondHeading } from '@/components/sections/DiamondHeading'
 import { AboutPillars } from '@/components/about/AboutPillars'
 import { AwardBand } from '@/components/about/AwardBand'
 import { AboutChapters } from '@/components/about/AboutChapters'
-import { resolveHeroImages } from '@/lib/images/hero'
 
 export const revalidate = 3600
 export const metadata: Metadata = { title: 'About' }
+
+const PLACEHOLDER_INTRO = `"Kahani" means story. Ours began on the busy food streets of India and found a home on Edinburgh's Antigua Street.`
+
+const PLACEHOLDER_CHAPTERS: SanityAboutChapter[] = [
+  {
+    eyebrow: 'Chapter One',
+    title: 'From the street stalls',
+    body: `Kahani began with a memory: the clamour of an Indian roadside at dusk — tawas hissing, charcoal smoke curling over the crowd, the snap of fresh spice in the air. That is the energy we set out to capture — honest street food, cooked fast and full of flavour, the kind you eat on your feet and remember for years. We carried it north to a corner of Antigua Street and built our kitchen around it.`,
+    image: null,
+  },
+  {
+    eyebrow: 'Chapter Two',
+    title: 'Recipes, handed down',
+    body: `Behind every dish is a recipe that was never written down — spice blends measured by eye and memory, passed from one generation's hands to the next. We cook them the slow way they were meant to be cooked, then plate them for a new city and a new table. Nothing here comes from a jar; everything here has a story.`,
+    image: null,
+  },
+]
 
 export default async function AboutPage() {
   const [settings, aboutPage] = await Promise.all([
@@ -19,49 +34,35 @@ export default async function AboutPage() {
     publicClient.fetch<SanityAboutPage | null>(ABOUT_PAGE),
   ])
 
-  const heroImages = resolveHeroImages(settings, undefined)
+  const intro = aboutPage?.intro ?? PLACEHOLDER_INTRO
+  const chapters = (aboutPage?.chapters?.length ? aboutPage.chapters : PLACEHOLDER_CHAPTERS)
 
   return (
     <>
-      {/* ── Hero (backbone) ──────────────────────────────────────── */}
-      <section className="hero about-hero" aria-labelledby="about-hero-heading">
-        <HeroCarousel images={heroImages} />
-        <div className="hero__scrim" aria-hidden="true" />
-        <div className="hero__frame" aria-hidden="true">
-          <span className="hero__corner hero__corner--tl" />
-          <span className="hero__corner hero__corner--tr" />
-          <span className="hero__corner hero__corner--bl" />
-          <span className="hero__corner hero__corner--br" />
-          <span className="hero__diamond hero__diamond--top" />
-          <span className="hero__diamond hero__diamond--bottom" />
+      {/* ── Page header ──────────────────────────────────────────── */}
+      <div className="about-page__hero">
+        <div className="container">
+          <h1 className="about-page__title">Our Kahani</h1>
         </div>
-        <div className="hero__inner">
-          <p className="hero__eyebrow">Edinburgh · Indian Street Food</p>
-          <h1 id="about-hero-heading" className="hero__title">
-            Our <span className="hero__title-accent">Kahani</span>
-          </h1>
+      </div>
+
+      {/* ── Intro ────────────────────────────────────────────────── */}
+      <div className="about-intro">
+        <div className="container">
+          <p className="about-intro__text">{intro}</p>
         </div>
-      </section>
+      </div>
 
-      {/* ── Intro (story layer, optional) ────────────────────────── */}
-      {aboutPage?.intro && (
-        <div className="about-intro">
-          <div className="container">
-            <p className="about-intro__text">{aboutPage.intro}</p>
-          </div>
-        </div>
-      )}
+      {/* ── Chapters ─────────────────────────────────────────────── */}
+      <AboutChapters chapters={chapters} />
 
-      {/* ── Chapters (story layer, optional) ─────────────────────── */}
-      <AboutChapters chapters={aboutPage?.chapters} />
-
-      {/* ── Pillars (backbone) ───────────────────────────────────── */}
+      {/* ── Pillars ──────────────────────────────────────────────── */}
       <AboutPillars />
 
-      {/* ── Award band (backbone, conditional on data) ───────────── */}
+      {/* ── Award band ───────────────────────────────────────────── */}
       <AwardBand awards={settings?.awards} />
 
-      {/* ── Visit CTA (backbone) ─────────────────────────────────── */}
+      {/* ── Visit CTA ────────────────────────────────────────────── */}
       <section className="about-visit" aria-labelledby="about-visit-heading">
         <div className="container">
           <DiamondHeading id="about-visit-heading">Plan Your Visit</DiamondHeading>

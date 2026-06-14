@@ -90,6 +90,7 @@ export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
         hidden={!open}
         onClick={() => setOpen(false)}
       >
+        <div className="site-overlay__container">
         <div
           ref={panelRef}
           className="site-overlay__panel"
@@ -131,6 +132,7 @@ export function SiteNav({ settings }: { settings: SanitySiteSettings | null }) {
               {phone && <> · <a href={`tel:${phone.replace(/\s/g, '')}`}>{phone}</a></>}
             </p>
           )}
+        </div>
         </div>
       </div>
     </header>

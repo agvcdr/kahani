@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat } from 'next/font/google'
+import { Marcellus, Karla } from 'next/font/google'
 import { publicClient } from '@/lib/sanity/client'
 import { SITE_SETTINGS } from '@/lib/sanity/queries'
 import type { SanitySiteSettings } from '@/types/sanity'
@@ -7,16 +7,16 @@ import { SiteNav } from '@/components/navigation/SiteNav'
 import { SiteFooter } from '@/components/sections/SiteFooter'
 import './globals.css'
 
-const playfair = Playfair_Display({
+const marcellus = Marcellus({
   subsets: ['latin'],
-  weight: ['700'],
+  weight: '400',
   variable: '--font-display',
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const karla = Karla({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '700', '800'],
   variable: '--font-body',
   display: 'swap',
 })
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const settings: SanitySiteSettings | null = await publicClient.fetch(SITE_SETTINGS)
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${marcellus.variable} ${karla.variable}`}>
       <body>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <SiteNav settings={settings} />

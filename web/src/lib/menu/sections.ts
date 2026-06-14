@@ -40,6 +40,7 @@ export const FOOD_SECTIONS: MenuSection[] = [
   {
     slug: 'desserts',
     label: 'Desserts',
+    description: 'Cardamom, saffron & sweet endings',
     categoryIds: ['desserts'],
     showSubHeadings: false,
   },

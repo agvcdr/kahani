@@ -27,8 +27,10 @@ export default async function SetMenuPage({ params }: { params: Promise<{ slug: 
   return (
     <div className="set-menu-page">
       <div className="set-menu-page__hero">
-        <Link href="/menu" className="category-page__back">← Menu</Link>
-        <h1 className="set-menu-page__title">{menu.name}</h1>
+        <div className="container">
+          <Link href="/menu" className="category-page__back">← Menu</Link>
+          <h1 className="set-menu-page__title">{menu.name}</h1>
+        </div>
       </div>
       <div className="container set-menu-page__body">
         <SetMenuDisplay menu={menu} />

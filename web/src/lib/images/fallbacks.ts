@@ -25,6 +25,20 @@ export const SPOTLIGHT_FALLBACK_IMAGES: { url: string; alt: string }[] = [
   { url: UNSPLASH('photo-1599487488170-d11ec9c172f0'), alt: 'A vibrant plate of Indian food' },
 ]
 
+/** Stock thumbnails for the menu index section rows.
+ *  Temporary — owner can override by adding images to each Sanity menu category. */
+export const MENU_SECTION_THUMBNAILS: Record<string, { url: string; alt: string }> = {
+  starters:    { url: UNSPLASH('photo-1601050690597-df0568f70950'), alt: 'A colourful spread of Indian starters and small plates' },
+  mains:       { url: UNSPLASH('photo-1565557623262-b51c2513a641'), alt: 'A rich aromatic curry served in a copper bowl' },
+  sides:       { url: UNSPLASH('photo-1596797038530-2c107229654b'), alt: 'Freshly baked naan breads and rice accompaniments' },
+  desserts:    { url: UNSPLASH('photo-1606491956689-2ea866880c84'), alt: 'Delicate Indian desserts with saffron and cardamom' },
+  wine:        { url: UNSPLASH('photo-1510812431401-41d2bd2722f3'), alt: 'A selection of wines — champagne, white, rosé and red' },
+  'beer-cider':{ url: UNSPLASH('photo-1608270586620-248524c67de9'), alt: 'Ice-cold craft beer and cider on a bar counter' },
+  cocktails:   { url: UNSPLASH('photo-1551024709-8f23befc6f87'), alt: 'Vibrant handcrafted cocktails and mocktails' },
+  spirits:     { url: UNSPLASH('photo-1569529465841-dfecdab7503b'), alt: 'A curated spirits collection — gin, whisky and rum' },
+  'soft-drinks':{ url: UNSPLASH('photo-1563227812-0ea4c22e6cc8'), alt: 'Lassi, Indian teas and refreshing soft drinks' },
+}
+
 /** Gallery stock fallbacks — 12 images across food/interior/events categories.
  *  Temporary; overridden by owner's Sanity photos with no code change. */
 export const GALLERY_FALLBACK_IMAGES: SanityGalleryImage[] = [

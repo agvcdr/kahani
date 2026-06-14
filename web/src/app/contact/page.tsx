@@ -13,7 +13,9 @@ export default async function ContactPage() {
   return (
     <div className="contact-page">
       <div className="contact-page__hero">
-        <h1 className="contact-page__title">Find Us</h1>
+        <div className="container">
+          <h1 className="contact-page__title">Find Us</h1>
+        </div>
       </div>
       <div className="container contact-page__body">
         {settings && <HoursAndLocation settings={settings} />}
